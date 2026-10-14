@@ -63,3 +63,7 @@ External environment drift: installed loose IsoZombie hash no longer matches the
 ## Current audit refinement — 2026-10-14
 
 GitHub onboarding is complete for the public B47ANCE/B47ANCEDActiveHours repository; repository setup is not a gameplay/runtime gate. Existing Lua speed blockers remain: pathfinding overrides running using global Speed; selected turnDelta observation cannot restore every derived field; remote predicate alone does not prove initialized authority; getZombieInfo is unsafe/passive-observation-incompatible; no supported Lua stats-call counter is established. See current speed, authority and proof documents. No runtime status changes.
+
+## Follow-up after PR #1 review
+
+PR #1 merged after offline version/tests and diff review; no required CI/branch rules were configured. Corrected one UTF-8 punctuation regression before merge. The prior turnDelta statement was too broad: IsoZombie overrides its getter, so normal-field restoration is a narrow source-supported candidate. Full restoration stays BLOCKED. Added scalar-unit asymmetry and absent explicit animation/turnDelta replication as observer-proof questions. G2/G6/G7/G8 and Phase B remain unchanged.

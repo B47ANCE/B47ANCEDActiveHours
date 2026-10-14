@@ -27,6 +27,22 @@ Smallest candidate: one standing, continuously loaded zombie, fixed Sprinter/Sha
 
 [VERIFIED source] PathFindBehavior2.java:905-907, :985 and :1014-1016 writes running solely from global Speed=1. IsoZombie.java:3164-3166 walking and :3173 lunge also consider speedType=1. Therefore the same category can have different running behavior by movement state. [INFERRED] Random global Speed may permit a Sprinter category in pursuit yet lose its running flag during pathfinding. It is not an approved universal baseline; measure actual movement and animation in each state.
 
-[VERIFIED source] IsoGameCharacter.java:12474-12485 getTurnDelta selects sprinting/running/normal values; setTurnDelta writes only turnDeltaNormal. Do not save the selected getter value and call that setter as exact restoration. Direct category method leftover turnDelta/lunger findings remain unresolved. No native activity refresh or DoZombieStats reset is permitted as a workaround.
+[CORRECTED source finding 2026-10-14] IsoGameCharacter.java:12474-12485 selects sprinting/running/normal values, but IsoZombie.java:4444-4445 overrides getTurnDelta to return turnDeltaNormal. Its inherited setTurnDelta writes that same normal field. The prior inherited-getter warning did not account for dispatch on IsoZombie. Normal turnDelta snapshot/restoration is now a source-supported Lua candidate; full category/animation/lunger restoration remains unresolved. No native activity refresh or DoZombieStats reset is permitted as a workaround.
 
 [INFERRED alternative] If reversible categories cannot pass, limit a future Lua-only capability proposal to verified supported subsets/settings, or neutral Core with diagnostics. Such an alternative needs user scope approval and cannot be advertised as complete Active/Inactive profile control. No fallback to Java or global sandbox mutation.
+
+## Native replication refinement — 2026-10-14
+
+All paths below are retained research/jar-source references, not runtime evidence.
+
+| State | [VERIFIED source] transport/application | Remaining limitation |
+|---|---|---|
+| lunger and running | NetworkZombieVariables.java:20-21 encodes flags; :42-43 restores them. | Native movement may rewrite flags after application; direct Shambler does not clear lunger. |
+| walk type/category | NetworkZombieAI.java:227 reads getVariableString("zombieWalkType"); IsoZombie.java:986 registers lowercase "zombiewalktype" callback from walkType; remote AI :299-300 derives category from packet walk type. | Case normalization and animation callback readiness need dedicated proof. Do not add a speculative capitalization workaround. |
+| speed scalar | NetworkZombieAI.java:224 encodes short(speedMod * 1000); ZombiePacket.java:88 reads short, :94 defaults 1000; server NetworkZombiePacker.java:256 divides by 1000. | Remote NetworkZombieAI.java:296 passes packet.speedMod directly to setSpeedMod; IsoGameCharacter.java:3775 assigns unchanged. Source shows asymmetric units. Runtime impact and effective client code remain UNKNOWN. |
+| normal turn delta | IsoZombie.java:4444 getter; inherited setter :12484; category helper IsoZombie.java:4946 changes normal field. | No explicit turnDelta field in inspected ZombiePacket payload. Do not assume owner correction reaches observer. |
+| animation/variant | Category methods mutate def animation rate and walkVariant. | Inspected packet does not serialize those fields explicitly. Animator-derived equivalence is UNKNOWN. |
+
+[UNKNOWN / RUNTIME GATE] Scalar-unit asymmetry must be investigated before calling native observer replication safe. It may be an effective-engine issue; no game patch, observer-side compensating writer or extra custom packet is authorized. Source inspection alone cannot establish a live bug or whether another path compensates. Measure each peer's native getter and actual displacement; never require exact scalar equality when known quantization is present. Normal owner encode has sub-0.001 truncation error for positive in-range values; receiving a raw short would be a distinct scale mismatch, not quantization.
+
+[INFERRED bounded candidate] Capture normal turnDelta through the zombie override and preserve it locally at a verified owner boundary, using its matching setter for that field only. This narrows one restoration gap; lunger, animation, running/walk type, native resets and cross-owner snapshots still block a complete adapter. No attribute or runtime gate is approved by this refinement.
