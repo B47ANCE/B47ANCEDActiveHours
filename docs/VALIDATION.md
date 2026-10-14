@@ -129,3 +129,21 @@ Exact final census command uses the snapshot rather than an unstable live input:
 ```
 
 Eight earlier PowerShell source assertions also passed in this turn. SHA256-foundations.json records newly retained JAR classes/decompiler sources; the hash-named index records the effective snapshot. No JVM game class was executed, and no bytecode transform or runtime proof is claimed.
+
+## Repository onboarding and resumed audit — 2026-10-14
+
+Project canonical version remains 0.1.0-dev.1. Documentation-only refinement within the existing development checkpoint; no public gameplay/API/config/save compatibility change and no version bump. Initial public main commit: ebc2b69808ccf185a6b7ef90f9d27b21b6c1197e, verified equal to origin/main; repository visibility PUBLIC. Research/ and linked local tool/config directories are ignored, not uploaded. Local preserved evidence remains available; public checkout has no engine sources. No CI/branch protection or runtime verification is claimed.
+
+Exact development commands from repository root:
+
+```powershell
+& C:\Users\willi\.codex\b47anced-team\tools\Test-PZRepositoryFreshness.ps1 -Repository .
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/check_versions.py --root .
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_check_versions.py
+git diff --cached --check
+git ls-remote origin refs/heads/main
+```
+
+[TESTED offline] Imported main freshness PASS: clean, 0 ahead/behind upstream/default; canonical version/mirrors PASS; nine integration tests PASS with local research present. Historical audit/source hashes preserved. Public-clone preservation intentionally omits unavailable ignored research, while still validating historical tracked documents; this omission is not a source evidence PASS. Before each push staged/tracked surfaces were reviewed for secrets and accidental binaries/diagnostics.
+
+[VERIFIED source inspection] Resumed audit inspects retained 42.21 decompiled output, not actual Lua calls. Installed JAR SHA256 remains E1A69EB743EDE60B213A0FE7F8B83D4FCAB773036D256CC4543A336F3B058A33; previously documented loose-class drift is unresolved. No game/server, Java component, prototype, deployment or package created. G2 BLOCKED; Phase B NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.

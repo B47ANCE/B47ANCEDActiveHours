@@ -67,6 +67,8 @@ class VersionChecks(unittest.TestCase):
 
     def test_preserved_research_and_historical_documents(self):
         baseline = json.loads((ROOT / 'scripts/versioning-preservation-baseline.json').read_text())
+        if not (ROOT / 'research').exists():
+            print('NOTE: local research evidence absent; only tracked historical documents checked.')
         for name, expected in baseline.items():
             if name.startswith('research/') and not (ROOT / 'research').exists():
                 continue  # Local proprietary evidence is deliberately excluded from GitHub.
