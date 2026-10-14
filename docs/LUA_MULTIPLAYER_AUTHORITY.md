@@ -27,3 +27,7 @@ First proof is deliberately one continuously loaded zombie with two clients. Han
 ## Replication scope refinement — 2026-10-14
 
 [VERIFIED source] Native boolean mapping carries lunger and running. Speed scalar is encoded as thousandths by owner and divided on server; retained remote AI parser instead passes the short directly to the scalar setter. This is a source-level unit discrepancy, not verified runtime behavior. The first proof must establish observer baseline units and actual motion before mutation; do not add independent observer writers. Packet fields do not explicitly carry normal turnDelta, walkVariant or animation-rate state. Vanilla replication offers a candidate path, not complete profile synchronization proof. See LUA_SPEED_CONTROL.md for exact references and limitations.
+
+## Native owner versus observer parse — 2026-10-14
+
+[VERIFIED source] NetworkZombieSimulator.java:288-291 returns before remote NetworkZombieAI.parse when the transport ID is locally authorized. Otherwise :293-299 clears owner references and invokes remote parser (with a vehicle-hit-state condition). Thus observer scalar application and future owner handoff should be assessed as distinct stages; an owner may retain state instead of receiving an observer correction. Lua command/authorization interleaving remains UNKNOWN. Packet builder uses final getWalkType after its inner AI call, and speed payload is conditional on prediction update bit; see speed audit. Native synchronization remains conditional evidence, not a safe adapter approval.
