@@ -75,3 +75,7 @@ PR #2 merged after offline checks; no required CI existed. Inner animation-varia
 ## Event/routing refinement after PR #3
 
 PR #3 merged with offline checks passing and no configured required CI. Remaining source findings: update event is neither owner-only nor lifecycle-complete; shouldSprint evaluation can change target; player-targeted sends can silently return without a route. A minimal read-only selected-zombie observation design is documented, but actual getter/event invocation, cross-peer selection, command ordering, safe restoration and dedicated outcomes remain UNKNOWN/BLOCKED. Gate statuses unchanged.
+
+## Restoration surface after PR #4
+
+PR #4 merged with offline checks passing; required CI remains absent. More exposed APIs were inspected, but no complete ordinary-Lua restoration path was established: sprite rate setter lacks a discovered matching getter, sprite accessor can allocate, running getter can mask raw state, and lunger/variant accessor pairs remain unestablished. G2 stays BLOCKED, Phase B NOT STARTED, G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. Read-only baseline design is the smallest independent next experiment; category mutation requires a safe recovery path.

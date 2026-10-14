@@ -60,3 +60,20 @@ All paths below are retained research/jar-source references, not runtime evidenc
 ## Passive observation limits
 
 [VERIFIED source] shouldSprint callback (IsoZombie.java:845-854) can clear a target during evaluation and reflects target/sound intent rather than speed category. It is excluded from passive telemetry and restoration snapshots. OnZombieUpdate :2900 occurs after native updateActiveState :2829; using it does not bypass native ordering or make profile writes durable. No event-only per-frame speed adapter is approved. Actual supported getter/event calls remain a runtime gate.
+
+## Restoration API surface — 2026-10-14
+
+[VERIFIED source] Category helpers mutate more than category: scalar, walkVariant, def.animFrameIncrease and sometimes lunger/normal turnDelta. Public getter/setter exposure is required for every captured state item; Java public instance fields do not qualify.
+
+| State | Source-supported ordinary-method candidate | Restoration verdict |
+|---|---|---|
+| speedMod | IsoGameCharacter.java:3771 getSpeedMod / :3775 setSpeedMod | Matching scalar pair only; no category/animation guarantee. |
+| walkType/category | IsoZombie.java:5055 getWalkType / :3371 setWalkType / :3388 setSpeedTypeFromWalkType | Can restore category derived from a recognized walk type without category reroll; enum/packet and full behavior remain runtime gates. |
+| normal turnDelta | IsoZombie.java:4444 getter / inherited IsoGameCharacter.java:12484 setter | Matching normal-field pair; native peer propagation is not proven. |
+| running | IsoGameCharacter.java:12366 isRunning / :12373 setRunning | Getter can mask the raw flag when endurance moodle >=3; not an unconditional raw snapshot pair. Applicability of that branch to a zombie is UNKNOWN. |
+| lunger / walkVariant | Fields/helper writes in IsoZombie | No corresponding named public concrete getter/setter found in the targeted IsoZombie/IsoGameCharacter method census. Complete restoration unresolved. |
+| animation rate | IsoSpriteInstance.setFrameSpeedPerFrame(F)V is public; IsoGameCharacter.getSpriteDef :6378 exposed object accessor | Setter multiplies input by static multiplier before assigning animFrameIncrease. No public rate getter found in IsoSpriteInstance concrete-method census; getFrame() is frame position, not frame rate. Direct instance-field access is not approved. |
+
+[TESTED offline bytecode] Main-JAR IsoSpriteInstance.setFrameSpeedPerFrame reads multiplier at offset 2, fmul at 5, writes animFrameIncrease at 6. Setting a guessed constant is not restoration. IsoSpriteInstance is registered for Lua exposure (LuaManager$Exposer.java:2278), but exposure does not supply missing methods or verify actual invocation. getSpriteDef creates a sprite instance when def is null (:6379-6381), so omit it from the first passive baseline. No reflection, setter-only guess, native stats reroll or temporary object replacement is an acceptable recovery mechanism.
+
+[INFERRED alternative for future approval] A scalar-only getSpeedMod/setSpeedMod experiment would avoid calling category helpers and their extra randomization, but changes feature scope, retains native overwrite/network-unit/global-sprint issues, and is not an approved adapter. Do not silently substitute it for fixed Sprinter/Shambler profiles. The current category proof remains conditional; only read-only baseline design can progress independently of complete rollback.
