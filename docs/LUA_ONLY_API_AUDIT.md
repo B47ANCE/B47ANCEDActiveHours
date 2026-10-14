@@ -19,3 +19,11 @@ References below are exact one-based lines in retained CFR output under `researc
 Speed must pass its independent proof before additional attributes. The existing attribute census remains useful, but does not prove reflection/native/mod paths or normal Lua field access. Cognition and memory remain field-based research candidates only; the uncalled memory-duration helper is not a proven reachable blocker. Strength damage includes global readers, sight/hearing include global readers, and speed has derived animation/locomotion state. Toughness requires damage/max-health semantics, not merely setHealth.
 
 No Java agents, third-party loaders, replacement classes, installed binary changes or production Lua implementation are part of the current architecture.
+
+## Observation and routing API refinement — 2026-10-14
+
+[VERIFIED source] IsoZombie.java:2900 emits OnZombieUpdate(zombie) after native updateActiveState :2829 and movement statistics. It has no current-owner predicate at its call site. Nearby early returns include null sprite :2886-2887 and dedicated indoor-zombie :2890-2892, plus remote stale/removal paths :2865-2883. Callback presence does not prove ownership, and absence does not prove destruction/unload.
+
+[VERIFIED source] IsoZombie.java:845-854 registers shouldSprint as a callback that can setTarget(null) while evaluating it. It is target intent, not a getter for speed category or lunger. Avoid arbitrary animation-variable reads as passive diagnostic substitutes. Public isCrawling :4138 and isDead (IsoGameCharacter.java:4936) are candidate safety predicates, not a complete registration/ownership proof. No supported lunger getter/setter pair was found in the targeted IsoZombie source inspection; normal Lua instance-field assignment remains disallowed.
+
+[UNKNOWN] Actual Lua event/getter availability, every lifecycle path, observation across server indoor states, and a supported stable object lookup after event gaps. IsoCell is exposed (LuaManager$Exposer.java:2314), but its implementation was not in the retained source set inspected here; no indexed lookup or full-world traversal guarantee is assumed. No runtime prototype is enabled.

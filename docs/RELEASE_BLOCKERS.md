@@ -71,3 +71,7 @@ PR #1 merged after offline version/tests and diff review; no required CI/branch 
 ## Packet-ordering refinement after PR #2
 
 PR #2 merged after offline checks; no required CI existed. Inner animation-variable capitalization is narrowed: the inspected outer packet builder overwrites its walk type from getWalkType. Remaining issues include optional speed payload defaulting, bytecode-confirmed scalar conversion asymmetry, owner/observer parse differences and actual movement/restoration. All runtime gates remain unchanged; no gameplay adapter is approved.
+
+## Event/routing refinement after PR #3
+
+PR #3 merged with offline checks passing and no configured required CI. Remaining source findings: update event is neither owner-only nor lifecycle-complete; shouldSprint evaluation can change target; player-targeted sends can silently return without a route. A minimal read-only selected-zombie observation design is documented, but actual getter/event invocation, cross-peer selection, command ordering, safe restoration and dedicated outcomes remain UNKNOWN/BLOCKED. Gate statuses unchanged.

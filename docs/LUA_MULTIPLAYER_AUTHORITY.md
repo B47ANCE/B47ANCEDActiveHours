@@ -31,3 +31,11 @@ First proof is deliberately one continuously loaded zombie with two clients. Han
 ## Native owner versus observer parse — 2026-10-14
 
 [VERIFIED source] NetworkZombieSimulator.java:288-291 returns before remote NetworkZombieAI.parse when the transport ID is locally authorized. Otherwise :293-299 clears owner references and invokes remote parser (with a vehicle-hit-state condition). Thus observer scalar application and future owner handoff should be assessed as distinct stages; an owner may retain state instead of receiving an observer correction. Lua command/authorization interleaving remains UNKNOWN. Packet builder uses final getWalkType after its inner AI call, and speed payload is conditional on prediction update bit; see speed audit. Native synchronization remains conditional evidence, not a safe adapter approval.
+
+## Command routing and observation boundaries
+
+[VERIFIED source] LuaManager$GlobalObject.java:5180-5184 exposes player-targeted sendServerCommand and executes it only on server. GameServer.java:3530-3539 silently returns if the player lacks PlayerToAddressMap registration or if the active connection lookup is null. Its signature supplies no delivery acknowledgment. Owner-player presence alone does not guarantee a live route. Never replace failed targeted delivery with broadcast or treat a send call as applied state.
+
+[INFERRED] Current owner player is a narrow routing candidate on server, subject to verified current identity/owner and native connection association. Pending intent must remain unapplied during null/disconnected route or ownership uncertainty. Completion needs observable owner/native state evidence, but no acknowledgment schema or retry protocol is approved until command/authorization ordering is measured. Clients cannot choose categories or thresholds.
+
+[VERIFIED source] OnZombieUpdate can reach observers; native activity update precedes the event. No event implies server authority or post-network readiness. A read-only event filter may observe the selected zombie; profile application still requires a separate verified owner boundary and transition-only dispatch. Missing event coverage must be reported, not filled with unsupported global scans or per-frame writes.

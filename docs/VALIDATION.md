@@ -169,3 +169,11 @@ PR #2 merged as 3eabc862acb75ff3fdebbfa10e238315ee50cfe4 after version checker, 
 | ZombiePacket.set(IsoZombie) | d31007771802ab40df723af9010d82e46296becbf2c030a0d6a79fecfa17e030 | 53 getWalkType, 59 packet walkType write |
 
 Source/bytecode findings are static only. Optional speed and owner/observer ordering were source-inspected, not runtime tested. Exact routine commands: bundled Python `scripts/check_versions.py --root .`, `scripts/test_check_versions.py`; `git diff --check`; shared `Test-PZRepositoryFreshness.ps1 -Repository .`. Version/mirrors and nine tests PASS; preserved research/historical document hashes still match. No launch, prototype, Java component, deployment or package. G2 BLOCKED; Phase B NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
+
+## PR #3 review/merge and Lua observation slice — 2026-10-14
+
+PR #3 merged as 1c70ff335153f4e047e50014747fc5b5c63d79c1. Review: CLEAN/MERGEABLE, no status-check rollup, unprotected main, no rulesets; no required CI was bypassed or claimed PASS. Offline version checker, nine tests and diff check PASS. New research/lua-observation-event-proof starts at fetched origin/main; freshness PASS, clean, zero ahead/behind default/upstream before edits.
+
+[VERIFIED source] Retained IsoZombie event ordering/early returns, shouldSprint callback side effect, Lua global targeted-send wrapper and server missing-route returns inspected. A targeted installed media/lua search returned no OnZombieUpdate/OnZombieCreate examples; this absence is not proof of unavailable events. IsoCell implementation was absent from the retained source paths inspected, so no list/lookup guarantee was established. No additional engine extraction or runtime execution occurred.
+
+Documentation-only refinement remains 0.1.0-dev.1 with no gameplay compatibility change. Exact validation commands from root: bundled Python executable recorded above with `scripts/check_versions.py --root .` and `scripts/test_check_versions.py`; `git diff --check`; shared `Test-PZRepositoryFreshness.ps1 -Repository .`. Current version/mirrors PASS; nine offline tests PASS, including unchanged local research/historical hashes. No executable probe, Java, launch, deployment or package. G2 BLOCKED; Phase B NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.

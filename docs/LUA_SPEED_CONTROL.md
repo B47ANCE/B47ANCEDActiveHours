@@ -56,3 +56,7 @@ All paths below are retained research/jar-source references, not runtime evidenc
 [TESTED offline / main-JAR bytecode] Remote NetworkZombieAI.parse has getfield ZombiePacket.speedMod:S at byte offset 215, i2f at 218 and invokevirtual IsoZombie.setSpeedMod(F)V at 219: no divide in that argument sequence. This strengthens the source-level unit-discrepancy finding; it is not executed engine evidence or proof of observable harm. IsoZombie.getTurnDelta has getfield turnDeltaNormal:F at offset 1 and freturn at 4. ZombiePacket.set(IsoZombie) invokes getWalkType at offset 53 and writes packet.walkType at 59. Exact method code hashes are recorded in VALIDATION.md. No parser or installed class was modified.
 
 [UNKNOWN / RUNTIME GATE] Which prediction modes occur for the controlled baseline, when bit 4 changes, actual peer scalar/movement outcomes, enum round-trip, effective peer classes and alternative compensation remain untested. No native override, observer writer, packet modification or global sandbox workaround is proposed.
+
+## Passive observation limits
+
+[VERIFIED source] shouldSprint callback (IsoZombie.java:845-854) can clear a target during evaluation and reflects target/sound intent rather than speed category. It is excluded from passive telemetry and restoration snapshots. OnZombieUpdate :2900 occurs after native updateActiveState :2829; using it does not bypass native ordering or make profile writes durable. No event-only per-frame speed adapter is approved. Actual supported getter/event calls remain a runtime gate.
