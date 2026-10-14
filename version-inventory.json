@@ -1,0 +1,158 @@
+{
+  "schema": 1,
+  "canonical": "VERSION",
+  "mirrors": [
+    {
+      "path": "README.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LUA_ONLY_API_AUDIT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LUA_SPEED_CONTROL.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LUA_PROFILE_ARCHITECTURE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LUA_MULTIPLAYER_AUTHORITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/SOLAR_TRANSITION_DESIGN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LUA_ONE_ZOMBIE_POC.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/CONFIGURATION_GUIDE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/PERFORMANCE_DESIGN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/TEST_PLAN.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/RELEASE_BLOCKERS.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/VERSION_POLICY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/VERSION_INVENTORY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/REPOSITORY_GOVERNANCE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    }
+  ],
+  "changelog": {
+    "path": "CHANGELOG.md",
+    "pattern": "^## \\[(?P<version>[^\\]]+)\\][^\\n]*$"
+  },
+  "packaging": {
+    "artifacts": [
+      {
+        "glob": "dist/current/*.zip",
+        "pattern": "B47ANCEDActiveHours-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?)\\.zip"
+      }
+    ]
+  },
+  "other_versions": [
+    {
+      "category": "pz",
+      "reference": "README.md and retained audits: Build 42.21",
+      "reason": "Game target, not project SemVer"
+    },
+    {
+      "category": "dependency",
+      "reference": "research/ and historical Java/tool/loader references",
+      "reason": "Java 25, CFR 0.152 and pinned upstream revisions are independent"
+    },
+    {
+      "category": "framework",
+      "reference": "docs/VERSION_POLICY.md and scripts/check_versions.py adoption",
+      "reason": "Framework provenance does not set project version"
+    },
+    {
+      "category": "inventory-schema",
+      "reference": "version-inventory.json: schema",
+      "reason": "Inventory format only"
+    }
+  ],
+  "historical": [
+    {
+      "reference": "docs/API_AUDIT.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/ATTRIBUTE_DIRECT_REFERENCE_INDEX.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/ATTRIBUTE_NETWORK_REPLICATION.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/ATTRIBUTE_READ_WRITE_CALL_GRAPH.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/DYNAMIC_ATTRIBUTES_API_AUDIT.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/MP_AUTHORITY_AUDIT.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/MULTIPLAYER_AUTHORITY.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/NATIVE_ACTIVITY_CALL_GRAPH.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/NATIVE_BRIDGE_DESIGN.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/NATIVE_BRIDGE_FEASIBILITY.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/NATIVE_OWNERSHIP_ORDERING.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "docs/ONE_ZOMBIE_POC_ARCHITECTURE.md",
+      "reason": "Preserved audit body; unassigned version describes original evidence"
+    },
+    {
+      "reference": "research/** and prior docs/VALIDATION.md body",
+      "reason": "Immutable source/hash/test observations; do not relabel as current runtime proof"
+    },
+    {
+      "reference": "docs/RELEASE_BLOCKERS.md and docs/TEST_PLAN.md historical sections",
+      "reason": "Preserved prior requirements/status narrative; current header controls version only"
+    }
+  ]
+}

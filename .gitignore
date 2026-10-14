@@ -1,0 +1,16 @@
+# Local engine evidence is retained locally, never published.
+/research/
+/.agents
+/.codex
+__pycache__/
+*.pyc
+/dist/
+/staging/
+*.log
+console.txt
+server-console.txt
+local.settings.json
+.env
+.env.*
+*.pem
+*.key
