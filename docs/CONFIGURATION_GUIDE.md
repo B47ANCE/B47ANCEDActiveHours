@@ -2,11 +2,11 @@ Project Version: 0.1.0-dev.1
 
 # Current Lua-only interpretation
 
-Active/Inactive mean custom speed/behavior profiles, never native inactivity. Server alone validates readable Lua configuration under the explicit user override recorded below. Core is neutral; both gameplay modules or vanilla ActiveOnly other than Both disable custom gameplay without changing sandbox values. Safe live restoration remains a blocker.
+Active/Inactive mean custom speed/behavior profiles, never native inactivity. Current 2026-10-14 policy requires server-authoritative sandbox settings for meaningful gameplay options. The earlier readable-Lua design below is historical and needs reconciliation before implementation; no configuration code exists. Core is neutral; both gameplay modules or vanilla ActiveOnly other than Both disable custom gameplay without changing sandbox values. Safe live restoration remains a blocker.
 
 Weighted selection is server-side: one category is 100% and ignores endpoint allocation; two weights normalize proportionally (20/40 becomes 1/3, 2/3); three endpoints 10/40 leave middle 50. Reject invalid categories/order, nonfinite/negative/over-100 weights, endpoint totals above 100 and two zero weights. Precompute CDF once. Proposed stable policy: separate Active/Inactive category rolls per zombie life/config revision; native speed scalar stability and persistent identity remain UNKNOWN. No per-update rerolls. Final validator implementation and ignored-input behavior await the speed proof. No unsupported attribute option is functional merely because it is described below.
 
-# Configuration contract (design only)
+# Historical configuration contract (superseded interface policy)
 
 Three selectable mods in one future Workshop item: B47ANCEDActiveHours (Core), B47ANCEDActiveHoursNight (depends on Core), B47ANCEDActiveHoursDay (depends on Core). Actual Build 42.21 dependency metadata is not yet verified. No runnable module/config files are shipped at this research gate.
 

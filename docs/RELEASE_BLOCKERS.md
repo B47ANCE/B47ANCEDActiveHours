@@ -59,3 +59,7 @@ Original no-speed-change/no-custom-profile scope is superseded by the new handof
 Smallest viable design is ONE_ZOMBIE_POC_ARCHITECTURE.md: prepared server and two clients, one continuously loaded zombie, Vanilla profiles first, exact decision seam only, explicit connected restoration test. It is a defensible conditional path, not a runnable/verified prototype. All gate statuses above remain unchanged. Compiler/Windows startup, effective agent-chain proof and command/update ordering are the immediate prerequisites; full lifecycle and Insane benchmarks remain release blockers.
 
 External environment drift: installed loose IsoZombie hash no longer matches the earlier audit baseline. Current immutable research snapshot AA340922... passed seam comparison; change cause/timing UNKNOWN. Recheck actual peer input bytes before any future test. This work did not change installed binaries.
+
+## Current audit refinement — 2026-10-14
+
+GitHub onboarding is complete for the public B47ANCE/B47ANCEDActiveHours repository; repository setup is not a gameplay/runtime gate. Existing Lua speed blockers remain: pathfinding overrides running using global Speed; selected turnDelta observation cannot restore every derived field; remote predicate alone does not prove initialized authority; getZombieInfo is unsafe/passive-observation-incompatible; no supported Lua stats-call counter is established. See current speed, authority and proof documents. No runtime status changes.

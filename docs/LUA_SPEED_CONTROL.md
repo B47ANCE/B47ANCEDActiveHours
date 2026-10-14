@@ -22,3 +22,11 @@ Status: [VERIFIED source-supported candidates], [UNKNOWN runtime safety], [BLOCK
 Ten proof questions remain: normal Lua invocation; actual movement; animation/walk type; native overwrite timing; network overwrite timing; observer propagation; ownership transfer; virtualization/reconstruction; faithful disable restoration without extra rerolls; bounded application cost. No category-only observation can close these questions.
 
 Smallest candidate: one standing, continuously loaded zombie, fixed Sprinter/Shambler decisions from server, applied once per accepted decision by its verified simulation owner. Observe ordinary native propagation. No crawler, solar, weighted sampling or additional attribute logic in that first experiment. Connected disable restoration is mandatory and currently [BLOCKED]: restoring only an old category invokes randomization and misses derived state. Do not promise exact restoration or reapply every frame to conceal overwrites.
+
+## Focused follow-up — 2026-10-14
+
+[VERIFIED source] PathFindBehavior2.java:905-907, :985 and :1014-1016 writes running solely from global Speed=1. IsoZombie.java:3164-3166 walking and :3173 lunge also consider speedType=1. Therefore the same category can have different running behavior by movement state. [INFERRED] Random global Speed may permit a Sprinter category in pursuit yet lose its running flag during pathfinding. It is not an approved universal baseline; measure actual movement and animation in each state.
+
+[VERIFIED source] IsoGameCharacter.java:12474-12485 getTurnDelta selects sprinting/running/normal values; setTurnDelta writes only turnDeltaNormal. Do not save the selected getter value and call that setter as exact restoration. Direct category method leftover turnDelta/lunger findings remain unresolved. No native activity refresh or DoZombieStats reset is permitted as a workaround.
+
+[INFERRED alternative] If reversible categories cannot pass, limit a future Lua-only capability proposal to verified supported subsets/settings, or neutral Core with diagnostics. Such an alternative needs user scope approval and cannot be advertised as complete Active/Inactive profile control. No fallback to Java or global sandbox mutation.
