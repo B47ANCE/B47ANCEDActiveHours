@@ -67,3 +67,7 @@ GitHub onboarding is complete for the public B47ANCE/B47ANCEDActiveHours reposit
 ## Follow-up after PR #1 review
 
 PR #1 merged after offline version/tests and diff review; no required CI/branch rules were configured. Corrected one UTF-8 punctuation regression before merge. The prior turnDelta statement was too broad: IsoZombie overrides its getter, so normal-field restoration is a narrow source-supported candidate. Full restoration stays BLOCKED. Added scalar-unit asymmetry and absent explicit animation/turnDelta replication as observer-proof questions. G2/G6/G7/G8 and Phase B remain unchanged.
+
+## Packet-ordering refinement after PR #2
+
+PR #2 merged after offline checks; no required CI existed. Inner animation-variable capitalization is narrowed: the inspected outer packet builder overwrites its walk type from getWalkType. Remaining issues include optional speed payload defaulting, bytecode-confirmed scalar conversion asymmetry, owner/observer parse differences and actual movement/restoration. All runtime gates remain unchanged; no gameplay adapter is approved.

@@ -155,3 +155,17 @@ PR #1 merge commit a911425a3df0569bb4f23d64c2552494a9a7b7a3 is verified on origi
 New branch research/lua-speed-replication-proof starts at verified origin/main: freshness PASS, clean, zero ahead/behind upstream/default. Documentation-only refinement remains 0.1.0-dev.1 with no gameplay compatibility change. Source findings: actual IsoZombie turnDelta override corrects the previous inherited-getter assumption; native flags encode lunger/running; remote/server scalar paths show different units; packet fields do not explicitly carry turnDelta/animation-rate/variant. These are retained decompiled-source observations, not live correctness claims. An inline parser read returned method code hashes only, not decoded instructions for these methods; it does not independently verify their semantics.
 
 Exact validation commands: `python scripts/check_versions.py --root .`, `python scripts/test_check_versions.py`, `git diff --check`, and shared Test-PZRepositoryFreshness.ps1 -Repository . (bundled Python executable as recorded above). No gameplay/runtime test was run. G2 BLOCKED; Phase B NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Historical local research is unchanged.
+
+## PR #2 review/merge and packet audit — 2026-10-14
+
+PR #2 merged as 3eabc862acb75ff3fdebbfa10e238315ee50cfe4 after version checker, nine offline tests and diff review. GitHub showed CLEAN/MERGEABLE, no status checks, unprotected main and no rulesets; absence is not CI PASS. New research/lua-packet-ordering-proof started at fetched origin/main with clean freshness PASS and zero ahead/behind. Version stays 0.1.0-dev.1; documentation-only slice, no gameplay/config/save compatibility change.
+
+[TESTED offline] A read-only inline Python audit used the retained research/index_attribute_bytecode.py in memory, replacing its resolved-instruction output filter with unconditional resolved output. Its on-disk source remained unchanged. It read the installed main JAR with zipfile, decoded method instructions and printed selected reference windows; no game class or JVM executed. Exact reproducing algorithm: read parser as UTF-8, replace `resolved if name == 'updateActiveState' else []` with `resolved`, exec under a non-main name; call parse on JAR entries NetworkZombieAI.class, IsoZombie.class and network/packets/character/ZombiePacket.class; select methods parse, getTurnDelta, and set(IsoZombie); inspect speedMod/setSpeedMod/turnDeltaNormal/getWalkType/walkType reference windows.
+
+| Method | Code SHA-256 | Relevant offsets |
+|---|---|---|
+| NetworkZombieAI.parse(ZombiePacket) | 9a66fe060a5efab45bc0f0ddd410fd1e1024d42b397a8b1acbb1b96c0982b242 | 215 short field read, 218 i2f, 219 scalar setter |
+| IsoZombie.getTurnDelta()F | d95ec7ed640ce7dbad63744844153e7f7af923d6e57d97390fe7a52508b72a55 | 1 normal field read, 4 freturn |
+| ZombiePacket.set(IsoZombie) | d31007771802ab40df723af9010d82e46296becbf2c030a0d6a79fecfa17e030 | 53 getWalkType, 59 packet walkType write |
+
+Source/bytecode findings are static only. Optional speed and owner/observer ordering were source-inspected, not runtime tested. Exact routine commands: bundled Python `scripts/check_versions.py --root .`, `scripts/test_check_versions.py`; `git diff --check`; shared `Test-PZRepositoryFreshness.ps1 -Repository .`. Version/mirrors and nine tests PASS; preserved research/historical document hashes still match. No launch, prototype, Java component, deployment or package. G2 BLOCKED; Phase B NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
