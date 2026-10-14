@@ -22,3 +22,7 @@ Runtime matrix: early/mid/late dusk and dawn, endpoints, seasons, endless/degene
 Insane population acceptance requires PERFORMANCE_DESIGN.md measurements, stress tests and native/multiplayer correctness. Offline mocks cannot satisfy G6 or G7. Version must be assigned before implementation and recorded in each actual runtime test.
 
 The foundational prototype entry sequence is now specified in ONE_ZOMBIE_POC_ARCHITECTURE.md. Offline evidence tooling checks bytecode instruction alignment and both retained activity seams, but no transform was executed. Future research-transform tests must include unknown/no-match descriptors, duplicate registration, later-agent changes, helper linkage, unchanged makeInactive and every unrelated method. First runtime pass remains inert, then connected disable/restoration, then one activity decision; attributes are separate later experiments. No current runtime gate is PASS.
+
+## Isolated speed-source validation
+
+Run python scripts/test_speed_proof.py (development lupa dependency). Sixteen actual-Lua mock tests cover command trust, nominal owner/observer behavior, category mapping, connected field restoration, transfer, duplicates, failures, anomalies, drift and hotkeys. Delayed-authority test intentionally demonstrates the unresolved old-owner local-write limitation. Dedicated Shambler -> Fast Shambler -> Sprinter -> Shambler, overwrite, handoff and behavioral restoration instructions are in ISOLATED_SPEED_PROOF.md. Mocks do not satisfy G2/G6/G7/G8.

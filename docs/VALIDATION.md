@@ -185,3 +185,25 @@ PR #4 merged as 25b45c72d0d7e75f6c0b557090c13c2d2276d8f3 after version checker, 
 [TESTED offline] Read-only inline Python reused the retained class parser in memory, retaining each method's access flags and all resolved instructions without changing its disk source. Inspected main-JAR IsoSpriteInstance, IsoZombie and IsoGameCharacter public concrete methods. Output confirmed sprite getFrame()F, setFrameSpeedPerFrame(F)V and no declared matching rate getter; targeted lunger/walkVariant accessor pairs were not found. Setter bytecode: multiplier read offset 2, fmul 5, animFrameIncrease write 6. The census omits non-Code methods and does not establish exhaustive cross-class semantics or actual Lua exposure/invocation. Source inspection establishes allocating getSpriteDef and conditional isRunning. No engine classes executed or extracted for distribution.
 
 Exact routine commands from root: bundled Python executable recorded above with `scripts/check_versions.py --root .`, `scripts/test_check_versions.py`, and `research/test_bytecode_index.py`; `git diff --check`; shared `Test-PZRepositoryFreshness.ps1 -Repository .`. Current version/mirrors PASS; nine version tests and five retained decoder tests PASS offline. Historical local engine source/hash evidence unchanged. Documentation-only refinement stays 0.1.0-dev.1; no gameplay compatibility change. G2 BLOCKED; Phase B NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. No executable probe, Java, launch, deployment or package.
+
+## Isolated proof preparation — 2026-10-14
+
+Version remains the user-specified 0.1.0-dev.1. New experimental capability fits the existing initial 0.1.0 development target; no stable/production contract or save migration. Feature branch feature/isolated-lua-speed-proof starts at 638d796ac1f6447dc0ec5515d1e33c518a57f56b on pending PR #5, which is not merged by this request. Initial freshness PASS, clean, matching branch upstream, one commit ahead/zero behind main. Proof runtime files, mod.info, Lua constant and new instructions are inventoried.
+
+[TESTED offline] Actual Lua sources executed through development lupa 2.6 in three independent mocked runtimes (server/A/B). Sixteen tests PASS: requested fixed transitions, nominal scalar/walk restoration, observer/server nonwrites, admin/invalid request rejection, Both conflict, duplicate/stale intent, transfer restoration, partial setter rollback, anomaly detection, no reapply during native drift, object reuse/gap, malformed ack/flat wire, missing owner, idempotent registrations, hotkeys. Fault injection with server-only ownership change demonstrates former-owner local write under delayed native revocation and server acknowledgment rejection; that test passing is NOT safe-handoff evidence. Native replication is nominally mocked, not the actual engine packet arithmetic.
+
+Exact commands from repository root:
+
+```powershell
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/check_versions.py --root .
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_check_versions.py
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_speed_proof.py
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' research/test_bytecode_index.py
+git diff --check
+```
+
+Version consistency PASS; nine version tests PASS; sixteen Lua mock tests PASS; five decoder tests PASS. Static source restrictions and case-correct require path checked. Lua engine calls, local mod loader, operator controls and dedicated behavior NOT TESTED. Lupa is development-only; no shipped Python/Java runtime dependency. Source references: exposed method rules retained in LUA_ONLY_API_AUDIT; category setters IsoZombie:3371-3389; scalar methods IsoGameCharacter:3771-3776; owner player/local tests IsoZombie:647 and IsoPlayer:6288; admin getAccessLevel IsoPlayer:7187 (deprecated native API, actual role formatting needs test); Both GameTime:1291; Keyboard exposure LuaManager$Exposer:2636; installed vanilla OnKeyPressed/isKeyDown examples. No unsupported method invented.
+
+Server state is session-only for a continuously loaded object. No persistent identity/late joins/reconnects; restart or invalidation requires ending the test, not claiming restoration. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Phase B source prepared, native execution NOT STARTED. No game/server, deployment, Workshop publication, game file modification or release package. Historical research/hashes and earlier evidence remain unchanged.
+
+Mock execution engine is Lua 5.4 via lupa, not PZ Kahlua. A read-only static check rejected forbidden activity/helper/scan calls and sandbox assignments, verified exact shared require paths, no proof Java/JAR files and no case-colliding proof filenames. Static PASS does not prove Linux/PZ loading. Runtime category labels use strict known slow1-3, sprint1-5 and 1-5 patterns; unknown variants block the experiment.

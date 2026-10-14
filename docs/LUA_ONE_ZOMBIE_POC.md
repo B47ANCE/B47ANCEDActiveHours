@@ -53,3 +53,7 @@ Before any future category experiment, require a documented ordinary-Lua recover
 The smallest independently investigable slice remains a read-only selected outdoor zombie on dedicated server and two clients: supported public getters only, no getSpriteDef/getZombieInfo/shouldSprint, no commands or setters. Record effective peer versions, owner transitions, idle/movement scalar behavior, callback gaps and observed animation/motion. Actual normal-Lua availability and stable peer selection still require separately authorized runtime testing; this design does not launch or deploy anything.
 
 If later evidence cannot supply complete reversible category control through exposed APIs, return a limitation report and request approval for a narrower Lua-only scalar/subset alternative. Full gameplay requirements and server authority cannot be relaxed silently. No fallback protocol, Java helper or sandbox mutation.
+
+## User-authorized prepared source
+
+The latest request authorizes an isolated executable Lua experiment. Its bounded alternative avoids the full category helpers and touches only walkType, derived category and scalar, with a captured baseline and one-shot failure rollback. Earlier full-helper restoration entry requirements remain for production/full profile behavior; they do not describe this narrower experimental setter surface. The dedicated human test, controlled-restoration limits and delayed-authority failure are documented in ISOLATED_SPEED_PROOF.md. No game execution, deployment or gate PASS.

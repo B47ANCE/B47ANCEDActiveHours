@@ -9,3 +9,4 @@
 - Review/merge PR #2; verify selected native instructions offline and refine final walk-type ordering, optional speed payload and owner/observer diagnostic matrix.
 - Review/merge PR #3 and refine read-only selected-zombie observation, update-event coverage and missing-owner-route limitations.
 - Review/merge PR #4; audit exposed restoration pairs and keep category mutation behind incomplete rollback and authority gates.
+- Prepare the user-authorized isolated Lua speed proof, owner-routed diagnostic commands, bounded counters, field restoration and human dedicated instructions; runtime gates unchanged.

@@ -61,6 +61,18 @@
     {
       "path": "docs/REPOSITORY_GOVERNANCE.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/ISOLATED_SPEED_PROOF.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "proof/B47ANCEDActiveHoursSpeedProof/42/mod.info",
+      "pattern": "^modversion=(?P<version>\\S+)$"
+    },
+    {
+      "path": "proof/B47ANCEDActiveHoursSpeedProof/42/media/lua/shared/B47AHProof.lua",
+      "pattern": "^P.Version = \"(?P<version>[^\\\"]+)\"$"
     }
   ],
   "changelog": {
