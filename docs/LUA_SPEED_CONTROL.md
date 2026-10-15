@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.2
+Project Version: 0.1.0-dev.3
 
 # Lua speed control feasibility
 
@@ -81,3 +81,11 @@ All paths below are retained research/jar-source references, not runtime evidenc
 ## Prepared narrow-setter experiment
 
 ISOLATED_SPEED_PROOF.md now implements reversible walkType/category/scalar changes, deliberately omitting full category helpers, sprite/lunger/turnDelta writes and continuous overrides. This is a test of movement-speed feasibility, not full native preset equivalence. Scalars 0.60/0.90 are fixed experiment inputs. Controlled restoration covers directly written fields; actual motion/animation recovery is a runtime test. Source mapping is Sprinter=1, FastShambler=2, Shambler=3. No runtime gate advances.
+
+## Readiness correction — 0.1.0-dev.3 / 2026-10-14
+
+Isolated development continues while G2 blocks production approval. Existing walk/category/scalar architecture is preserved. Corrected ordinary-Lua validation so absent walk/category cannot pass nil equality; the snapshot path likewise rejects malformed native reads without crashing sample output. Fixed empty native command arguments by adding session metadata to every request, so controlled restoration and server dump no longer depend on an empty table surviving transport. Direct-field restoration and failed-setter rollback pass Lua 5.1 and 5.4 mocks; actual movement, animation and native overwrite outcomes remain NOT TESTED. No native activity, full category helper, sprite or additional attribute writes were added. See ISOLATED_SPEED_PROOF.md for the exact human procedure.
+
+## Final runtime preparation — 2026-10-14
+
+No new demonstrated Lua defect in the final static/source review; speed source remains unchanged. Mapping, narrow setters, no continuous correction and bounded restoration behavior remain as previously audited. Current runbook RUNTIME_TEST_RUNBOOK.md requires passive native/API/owner/scalar agreement before any speed request, then actual motion/animation/pursuit/pathfinding and 60-second overwrite measurements. Original restoration fields come from the first server DISPATCH observation, not an assumed nominal preset. Quantization tolerance does not excuse a 1000-like scalar anomaly or changed behavior. No new runtime evidence.

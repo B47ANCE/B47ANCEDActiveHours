@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.2
+Project Version: 0.1.0-dev.3
 
 # Lua profile architecture — conditional design
 

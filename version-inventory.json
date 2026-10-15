@@ -73,6 +73,14 @@
     {
       "path": "proof/B47ANCEDActiveHoursSpeedProof/42/media/lua/shared/B47AHProof.lua",
       "pattern": "^P.Version = \"(?P<version>[^\\\"]+)\"$"
+    },
+    {
+      "path": "docs/RUNTIME_TEST_RUNBOOK.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/RUNTIME_EVIDENCE_TEMPLATE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
