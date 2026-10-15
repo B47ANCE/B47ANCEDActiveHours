@@ -1,6 +1,6 @@
 B47AHProof = B47AHProof or {}
 local P = B47AHProof
-P.Version = "0.1.0-dev.1"
+P.Version = "0.1.0-dev.2"
 P.Module = "B47AHSpeedProof"
 -- Technical experiment targets, not production balance/configuration.
 P.Fixed = { Shambler = {walk="slow1", category=3, scalar=0.60},
