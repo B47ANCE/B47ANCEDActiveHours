@@ -236,3 +236,30 @@ Results after fixes: version consistency PASS; nine version tests PASS; thirty-s
 Readiness assessment and exact manual install/operator/failure procedure: ISOLATED_SPEED_PROOF.md. Next milestone is human load/API/role/key smoke validation and passive baseline on one disposable dedicated server/two clients, then fixed transition/60-second overwrite/restoration, and separate ownership-fault sessions. No actual runtime results or current logs exist for this new source, so prior logs were not substituted as evidence and no server/SFTP/save files were accessed. G2 BLOCKED (production), G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. Safe isolated research/testing is allowed. No installation, launch, deployment, save edit, Workshop publication or release package.
 
 Final review also covers enrollment-broadcast send exceptions: the prototype records enrollment-send-error and stops without retry or mutation; regression included in the thirty-six-test count.
+
+## Final runtime handoff preparation — 2026-10-14 / existing 0.1.0-dev.3
+
+Authoritative checkout unchanged: Desktop/Work/Project Zomboid/Mod Repositories/B47ANCEDActiveHours. Started clean on fix/lua-proof-readiness at 24d682a2494afc145ebcb22f6f095fe5267a1766, matching public upstream, eight ahead/zero behind main; freshness PASS. New docs/dev3-runtime-test-handoff tracks that verified source branch until its own push. No merges, migrations or additional checkout. This handoff is documentation-only, not a new version/compatibility iteration; canonical version and Lua source remain unchanged.
+
+[VERIFIED source / STATIC PASS] Re-read all three Lua files and mod.info plus source evidence for native mapping/getter/setter exposure, role/routing, nil args, event placement, loader-side guards, session/intent/revision checks, duplicate/stale input, owner-only batch path, passive observer, deadline, restoration/rollback and bounded counters. No new demonstrated defect. Static require case/layout/common+42 and no forbidden Java/activity/sandbox-write/population-scan calls remain covered by the existing test. No new speculative architecture or runtime dependency.
+
+[VERIFIED read-only environment] Local client cache mods/Server/Saves directories exist; contents/secrets were not read. Installed client server BAT omits argument forwarding; dedicated Steam StartServer64 includes an agent option and only two forwarded tokens; non-Steam StartServer64 omits forwarding. These launchers were neither executed nor modified. Dedicated built-in JRE exists; three targeted loose zombie/AI/simulator overrides were absent there, which is NOT a full integrity audit. Client and dedicated main JAR SHA256 match E1A69EB743EDE60B213A0FE7F8B83D4FCAB773036D256CC4543A336F3B058A33. Previously documented client loose-class drift remains unresolved. No agent implementation was inspected/adopted. Runbook uses human-reviewed vanilla GameServer arguments supported in retained GameServer.java:644-645 and :808-820 and private profile filenames from SandboxOptions.java:685-691; actual launch/cache/loader remains NOT TESTED.
+
+Offline commands (repository root, bundled Python):
+
+```powershell
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/check_versions.py --root .
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_check_versions.py
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_speed_proof.py
+$env:B47_PROOF_LUA='54'
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_speed_proof.py
+Remove-Item Env:\B47_PROOF_LUA
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' research/test_bytecode_index.py
+git diff --check
+```
+
+[TESTED offline] Version consistency PASS; nine version tests PASS; thirty-six proof tests PASS with each of Lua 5.1 and Lua 5.4 via existing lupa; five decoder tests PASS. Kahlua/Build 42.21/native calls/Steam connections were not executed. Warning: dist/current/*.zip absent/deferred and checker covers only declared mirrors; no package/release check claimed. Git line-ending notices, if emitted, are metadata conversion notices, not gameplay evidence. Historical preservation tests PASS. No runtime success inferred.
+
+Changed surfaces: new RUNTIME_TEST_RUNBOOK.md and RUNTIME_EVIDENCE_TEMPLATE.md, their current-header version inventory entries, and links/dated preparation notes in README, CHANGELOG, ISOLATED_SPEED_PROOF, LUA_SPEED_CONTROL, LUA_MULTIPLAYER_AUTHORITY, LUA_ONE_ZOMBIE_POC, TEST_PLAN, RELEASE_BLOCKERS, VALIDATION and VERSION_INVENTORY. Lua/mod.info/game files, existing artwork, research, historical validation sections and root VERSION are unchanged. The evidence template is blank/NOT EXECUTED; filled logs/backups belong privately outside the repository.
+
+G2 production architecture BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Human passive smoke is the next milestone, not expanded gameplay. No directory/cache creation, installation, game/server launch, save access/modification, launcher editing, deployment, Workshop action or package creation was performed.

@@ -95,3 +95,11 @@ Safe isolated development continues despite production G2. Prototype defects rep
 Remaining blockers: actual loader/API/hotkey/role execution; real movement/sprinting and animation; native packet scalar asymmetry and overwrite behavior; actual stale-input rejection and effects through later ownership; connected behavioral restoration; peer effective-class provenance; reconnect/persistence/general-population support. Stale native authorization race remains explicit. Runtime gates unchanged: G2 BLOCKED (production architecture), G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. Phase B source prepared, PZ runtime pending. Recommended next milestone is the human-run passive/load smoke test followed by the fixed-speed matrix, not production solar/profile expansion.
 
 The handoff's old Desktop/Repositories path is absent; verified working copy is Desktop/Work/Project Zomboid/Mod Repositories/B47ANCEDActiveHours. No restart, discarded research, deployment, launch, save edits or Workshop/package operation occurred.
+
+## Final runtime preparation status — 2026-10-14
+
+Existing prototype passes the final offline/static review; no new demonstrated Lua issue and no source changes. G2 remains a production architecture gate and does not block isolated controlled experiments. Readiness report/runbook and blank evidence template are prepared, not executed.
+
+Environmental hazards found by read-only inspection: the client installation server BAT drops arguments; dedicated Steam BAT includes an agent option and forwards only two tokens; non-Steam BAT drops arguments. None was executed or changed. Runbook supplies a HUMAN-ONLY direct vanilla GameServer invocation with explicit new cache/profile, no agent, no new launcher and no installed modifications. Actual vanilla/effective peer provenance remains a setup prerequisite; matching JARs do not exclude class overrides. No source/runtime dependencies adopted.
+
+Remaining capabilities are NOT TESTED in PZ/Kahlua, with ownership race BLOCKED for production. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED unchanged. No production/package/publication approval. Next action is the human vanilla-environment check and passive smoke, then measured fixed-speed/restore and independent ownership sessions.
