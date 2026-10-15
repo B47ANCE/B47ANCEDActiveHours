@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.3
 
 # Current Lua-only blockers — controlling status
 
@@ -18,7 +18,7 @@ The latest Lua-only handoff supersedes the native implementation requirements be
 4. Server decision delivery to current native owner, handoff timing, stale IDs and observer agreement remain UNKNOWN.
 5. Persistent identity, virtualization/reconstruction, join/reconnect/restart and bounded population cost remain UNKNOWN.
 6. Additional attributes lack approved complete normal-Lua adapters; none is required to unblock independent speed proof. Health is not toughness.
-7. Module metadata/configuration/localization remain deferred before implementation; initial SemVer and version validation are now established; no executable gameplay or release artifacts exist.
+7. Module metadata/configuration/localization remain deferred before implementation; initial SemVer and version validation are now established; isolated experimental source exists, but production gameplay and release artifacts do not.
 
 Smallest conditional path: LUA_ONE_ZOMBIE_POC.md. No solar or additional attribute code before fixed-speed proof. No native activity access, sandbox mutation, agent, binary changes, launch, deployment or packaging.
 
@@ -79,3 +79,27 @@ PR #3 merged with offline checks passing and no configured required CI. Remainin
 ## Restoration surface after PR #4
 
 PR #4 merged with offline checks passing; required CI remains absent. More exposed APIs were inspected, but no complete ordinary-Lua restoration path was established: sprite rate setter lacks a discovered matching getter, sprite accessor can allocate, running getter can mask raw state, and lunger/variant accessor pairs remain unestablished. G2 stays BLOCKED, Phase B NOT STARTED, G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. Read-only baseline design is the smallest independent next experiment; category mutation requires a safe recovery path.
+
+## Isolated speed proof prepared — 2026-10-14
+
+User authorized a bounded Lua implementation at 0.1.0-dev.1. See ISOLATED_SPEED_PROOF.md. Source uses only walk-type/category/scalar setter pairs, not irreversible full category helpers. Capture/restore covers directly changed fields; subsequent native movement/animation recovery remains NOT TESTED. One server target, explicit admin intent, owner-only command, local native owner checks, server current-owner acknowledgment validation and bounded diagnostics are implemented. Sixteen mocked Lua tests PASS offline; they do not verify PZ APIs or MP.
+
+Critical handoff gap remains explicit: independent native authorization may be delayed, allowing an old owner a local write before revocation; server rejects stale acknowledgment, while native packet rejection must be verified dedicated. No full distributed atomicity, persistent ID, late-join/reconnect or restart recovery is claimed. Native scalar-unit asymmetry, animation behavior, overwrites, helper equivalence and connected restoration remain runtime gates. Production G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED unchanged. Phase B source prepared, PZ runtime execution NOT STARTED; no PASS.
+
+Protocol is a flat-argument diagnostic Lua command exchange under the user's explicit prototype authorization, not a production packet/identity design. Missing route or acknowledgment freezes pending writes; invalidation can block restoration and must be recorded as failure. No observer correction, continuous override, native activity manipulation, sandbox mutation, population scan, deployment or launch.
+
+## Current readiness status — 0.1.0-dev.3 / 2026-10-14
+
+Safe isolated development continues despite production G2. Prototype defects reproduced and fixed offline: empty Restore/Dump tables omitted by native transport; malformed walk/category snapshot accepted by nil equality; no bounded missing-ack evidence; duplicate admin intents lacked identity. Added explicit stops on pending/unobserved ownership uncertainty, bounded diagnostic reasons and controlled-rollback tests. Lua 5.1 and 5.4 execution in mocks is STATIC/OFFLINE PASS, not Kahlua or PZ proof.
+
+Remaining blockers: actual loader/API/hotkey/role execution; real movement/sprinting and animation; native packet scalar asymmetry and overwrite behavior; actual stale-input rejection and effects through later ownership; connected behavioral restoration; peer effective-class provenance; reconnect/persistence/general-population support. Stale native authorization race remains explicit. Runtime gates unchanged: G2 BLOCKED (production architecture), G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. Phase B source prepared, PZ runtime pending. Recommended next milestone is the human-run passive/load smoke test followed by the fixed-speed matrix, not production solar/profile expansion.
+
+The handoff's old Desktop/Repositories path is absent; verified working copy is Desktop/Work/Project Zomboid/Mod Repositories/B47ANCEDActiveHours. No restart, discarded research, deployment, launch, save edits or Workshop/package operation occurred.
+
+## Final runtime preparation status — 2026-10-14
+
+Existing prototype passes the final offline/static review; no new demonstrated Lua issue and no source changes. G2 remains a production architecture gate and does not block isolated controlled experiments. Readiness report/runbook and blank evidence template are prepared, not executed.
+
+Environmental hazards found by read-only inspection: the client installation server BAT drops arguments; dedicated Steam BAT includes an agent option and forwards only two tokens; non-Steam BAT drops arguments. None was executed or changed. Runbook supplies a HUMAN-ONLY direct vanilla GameServer invocation with explicit new cache/profile, no agent, no new launcher and no installed modifications. Actual vanilla/effective peer provenance remains a setup prerequisite; matching JARs do not exclude class overrides. No source/runtime dependencies adopted.
+
+Remaining capabilities are NOT TESTED in PZ/Kahlua, with ownership race BLOCKED for production. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED unchanged. No production/package/publication approval. Next action is the human vanilla-environment check and passive smoke, then measured fixed-speed/restore and independent ownership sessions.

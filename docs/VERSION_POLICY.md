@@ -49,10 +49,12 @@ Require valid canonical SemVer and inventory; synchronized metadata/code/docs/cu
 
 ## Project adoption — B47ANCE'd Active Hours
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.3
 
 User approved initial development version on 2026-10-08. This initializes versioning for research; it is not a gameplay release or a compatibility claim. No previous project version exists. An eventual stable 0.1.0 is conditional, not approved for release. Further checkpoints require deliberate version decisions; this milestone does not automatically bump versions.
 
 Compatibility contract covers future public configuration identifiers, saved state, gameplay behavior and exposed APIs. Compatible fixes use PATCH, compatible features MINOR, incompatible contracts MAJOR; during 0.y.z document breaking changes explicitly. No gameplay contract has been implemented here.
 
 The machine inventory is version-inventory.json; human inventory is docs/VERSION_INVENTORY.md. No docs/VERSIONING.md alias is required in this project. Checker adopted unchanged from the framework template; it executes only development validation and never creates packages. Current research documents have a current-version header; preserved historical audit bodies do not become new runtime evidence. Release artifact validation remains deferred in development and must fail with --release while absent. All gameplay/runtime/release gates retain their prior statuses.
+
+Development decision 2026-10-14: current 0.1.0-dev.2 -> target 0.1.0-dev.3 before readiness fixes. Compatibility impact is PATCH (compatible defect correction/instrumentation); advance the prerelease checkpoint within the unreleased 0.1.0 target, not a new stable release or public gameplay/config/save contract. Historical reports retain their original tested versions.

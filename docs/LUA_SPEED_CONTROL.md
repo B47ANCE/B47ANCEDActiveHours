@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.3
 
 # Lua speed control feasibility
 
@@ -77,3 +77,15 @@ All paths below are retained research/jar-source references, not runtime evidenc
 [TESTED offline bytecode] Main-JAR IsoSpriteInstance.setFrameSpeedPerFrame reads multiplier at offset 2, fmul at 5, writes animFrameIncrease at 6. Setting a guessed constant is not restoration. IsoSpriteInstance is registered for Lua exposure (LuaManager$Exposer.java:2278), but exposure does not supply missing methods or verify actual invocation. getSpriteDef creates a sprite instance when def is null (:6379-6381), so omit it from the first passive baseline. No reflection, setter-only guess, native stats reroll or temporary object replacement is an acceptable recovery mechanism.
 
 [INFERRED alternative for future approval] A scalar-only getSpeedMod/setSpeedMod experiment would avoid calling category helpers and their extra randomization, but changes feature scope, retains native overwrite/network-unit/global-sprint issues, and is not an approved adapter. Do not silently substitute it for fixed Sprinter/Shambler profiles. The current category proof remains conditional; only read-only baseline design can progress independently of complete rollback.
+
+## Prepared narrow-setter experiment
+
+ISOLATED_SPEED_PROOF.md now implements reversible walkType/category/scalar changes, deliberately omitting full category helpers, sprite/lunger/turnDelta writes and continuous overrides. This is a test of movement-speed feasibility, not full native preset equivalence. Scalars 0.60/0.90 are fixed experiment inputs. Controlled restoration covers directly written fields; actual motion/animation recovery is a runtime test. Source mapping is Sprinter=1, FastShambler=2, Shambler=3. No runtime gate advances.
+
+## Readiness correction — 0.1.0-dev.3 / 2026-10-14
+
+Isolated development continues while G2 blocks production approval. Existing walk/category/scalar architecture is preserved. Corrected ordinary-Lua validation so absent walk/category cannot pass nil equality; the snapshot path likewise rejects malformed native reads without crashing sample output. Fixed empty native command arguments by adding session metadata to every request, so controlled restoration and server dump no longer depend on an empty table surviving transport. Direct-field restoration and failed-setter rollback pass Lua 5.1 and 5.4 mocks; actual movement, animation and native overwrite outcomes remain NOT TESTED. No native activity, full category helper, sprite or additional attribute writes were added. See ISOLATED_SPEED_PROOF.md for the exact human procedure.
+
+## Final runtime preparation — 2026-10-14
+
+No new demonstrated Lua defect in the final static/source review; speed source remains unchanged. Mapping, narrow setters, no continuous correction and bounded restoration behavior remain as previously audited. Current runbook RUNTIME_TEST_RUNBOOK.md requires passive native/API/owner/scalar agreement before any speed request, then actual motion/animation/pursuit/pathfinding and 60-second overwrite measurements. Original restoration fields come from the first server DISPATCH observation, not an assumed nominal preset. Quantization tolerance does not excuse a 1000-like scalar anomaly or changed behavior. No new runtime evidence.

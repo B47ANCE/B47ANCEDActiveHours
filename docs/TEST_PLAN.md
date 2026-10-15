@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.3
 
 # Current Lua-only validation plan
 
@@ -22,3 +22,19 @@ Runtime matrix: early/mid/late dusk and dawn, endpoints, seasons, endless/degene
 Insane population acceptance requires PERFORMANCE_DESIGN.md measurements, stress tests and native/multiplayer correctness. Offline mocks cannot satisfy G6 or G7. Version must be assigned before implementation and recorded in each actual runtime test.
 
 The foundational prototype entry sequence is now specified in ONE_ZOMBIE_POC_ARCHITECTURE.md. Offline evidence tooling checks bytecode instruction alignment and both retained activity seams, but no transform was executed. Future research-transform tests must include unknown/no-match descriptors, duplicate registration, later-agent changes, helper linkage, unchanged makeInactive and every unrelated method. First runtime pass remains inert, then connected disable/restoration, then one activity decision; attributes are separate later experiments. No current runtime gate is PASS.
+
+## Isolated speed-source validation
+
+Run python scripts/test_speed_proof.py (development lupa dependency). Sixteen actual-Lua mock tests cover command trust, nominal owner/observer behavior, category mapping, connected field restoration, transfer, duplicates, failures, anomalies, drift and hotkeys. Delayed-authority test intentionally demonstrates the unresolved old-owner local-write limitation. Dedicated Shambler -> Fast Shambler -> Sprinter -> Shambler, overwrite, handoff and behavioral restoration instructions are in ISOLATED_SPEED_PROOF.md. Mocks do not satisfy G2/G6/G7/G8.
+
+## Readiness regression suite — 0.1.0-dev.3
+
+Run the existing three project commands, with scripts/test_speed_proof.py defaulting to development lupa.lua51; repeat with B47_PROOF_LUA=54 for Lua 5.4. Thirty-six tests run per Lua engine. Added native empty-table omission, required walk/category, malformed apply before write, session payload, stale/duplicate admin intent, operator binding, missing-ack/restore deadlines, spoofed observer ack rejection, post-revocation read-only samples, bounded rings, nil API failures, failed restoration rollback, structured dump context, modifier guards and send exceptions. The retained delayed-authorization test intentionally demonstrates an old local write; a green test is not a race fix or dedicated PASS.
+
+Current exact installation/human matrix is ISOLATED_SPEED_PROOF.md. Collect session/revision and counters plus actual displacement, animation and pursuit behavior for server/owner/observer. Use the seven-capability runtime classification table there; all runtime behaviors are NOT TESTED, with ownership safety BLOCKED for production. Thirty-six mocks, nine version tests and five decoder tests are offline only.
+
+## Final run preparation — 2026-10-14
+
+Runbook: RUNTIME_TEST_RUNBOOK.md. Blank form: RUNTIME_EVIDENCE_TEMPLATE.md. Required first stage is PASSIVE: F11 on both clients, A server-dump/admin route, one F6 candidate, getters/selected identity/owner consistency, zero mutation counters, no pending/STOP. Only after every prerequisite is actually met may the human perform fixed transitions and 60-second observation/connected restoration. Transfer and overlap faults use fresh disposable private runs; no ownership forcing or packet tools. Failure to obtain a handoff is NOT TESTED, not success.
+
+Offline recheck at unchanged dev.3: nine version tests PASS, thirty-six proof tests PASS per Lua 5.1 and Lua 5.4 engine, five decoder tests PASS. Source and mocks are not Kahlua/native-network evidence. No code changes were needed. The operator must verify launcher argument delivery and absence of agent/override contamination before live setup.

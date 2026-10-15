@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.3
 
 # Minimal Lua-only one-zombie proof design
 
@@ -53,3 +53,17 @@ Before any future category experiment, require a documented ordinary-Lua recover
 The smallest independently investigable slice remains a read-only selected outdoor zombie on dedicated server and two clients: supported public getters only, no getSpriteDef/getZombieInfo/shouldSprint, no commands or setters. Record effective peer versions, owner transitions, idle/movement scalar behavior, callback gaps and observed animation/motion. Actual normal-Lua availability and stable peer selection still require separately authorized runtime testing; this design does not launch or deploy anything.
 
 If later evidence cannot supply complete reversible category control through exposed APIs, return a limitation report and request approval for a narrower Lua-only scalar/subset alternative. Full gameplay requirements and server authority cannot be relaxed silently. No fallback protocol, Java helper or sandbox mutation.
+
+## User-authorized prepared source
+
+The latest request authorizes an isolated executable Lua experiment. Its bounded alternative avoids the full category helpers and touches only walkType, derived category and scalar, with a captured baseline and one-shot failure rollback. Earlier full-helper restoration entry requirements remain for production/full profile behavior; they do not describe this narrower experimental setter surface. The dedicated human test, controlled-restoration limits and delayed-authority failure are documented in ISOLATED_SPEED_PROOF.md. No game execution, deployment or gate PASS.
+
+## Test-ready diagnostic checkpoint — 0.1.0-dev.3
+
+The existing prototype is retained and improved; G2 is production architecture approval, not a ban on isolated experiments. Fixed malformed snapshots, native empty-argument transport and duplicate admin intents. Added 300-OnTick one-shot acknowledgment deadline (technical safety bound, not a gameplay setting), reasoned STOP records and bounded request/result evidence. These monitors never rewrite speed or retry commands. Sampling continues after mutation freeze to preserve evidence.
+
+Current operator procedure and capability classifications are in ISOLATED_SPEED_PROOF.md. First verify load, all API reads, role/hotkeys and passive server/owner/observer baseline; then three fixed transitions with actual motion/animation, 60-second overwrite observation and connected restoration. Use a separate session for idle ownership transfer and another for the pending-transfer fault. Old A's owner-revoked freeze is expected after transfer; B can mutate only if server remains valid and native B authorization is current. Server STOP requires ending mutation testing, not bypassing flags. Existing stale-revocation race is not solved by mocks. No production systems added or runtime gates advanced.
+
+## Final operator preparation — 2026-10-14
+
+The immediate milestone is real evidence, not another architecture. Lua source remains unchanged after final static review. RUNTIME_TEST_RUNBOOK.md supplies private cache/profile bootstrap, stopped-cache backup, source-only installation/hash comparison, passive smoke, fixed transitions/overwrite/restoration and separate ownership tests. RUNTIME_EVIDENCE_TEMPLATE.md is blank and NOT EXECUTED. Use only one existing continuously loaded zombie; wrong selection or safety stop ends that mutation attempt without retarget/reset. No installation or launch was performed.
