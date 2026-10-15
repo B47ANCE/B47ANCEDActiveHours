@@ -23,3 +23,5 @@ Approved initial project version is recorded in root VERSION. See docs/VERSION_P
 Prepared isolated experiment: [installation, operator controls and dedicated matrix](docs/ISOLATED_SPEED_PROOF.md). Source under proof/ uses a distinct diagnostic Mod ID; production Core/Night/Day remain absent. Thirty-six actual-Lua mock tests per Lua 5.1/5.4 engine are offline only. Runtime gates stay unchanged.
 
 Current checkpoint adds readiness fixes; G2 blocks production approval and does not block isolated prototype validation. Follow docs/ISOLATED_SPEED_PROOF.md for human installation and three-peer procedure; no automatic deployment/launch.
+
+Final human preparation: [disposable test runbook](docs/RUNTIME_TEST_RUNBOOK.md) and [blank runtime evidence form](docs/RUNTIME_EVIDENCE_TEMPLATE.md). Prototype code is unchanged by this documentation-only handoff; runtime evidence remains pending.

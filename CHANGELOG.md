@@ -2,6 +2,8 @@
 
 ## [0.1.0-dev.3]
 
+- Complete final static review and passive-first runtime runbook/evidence template; document launcher/environment hazards. No Lua source or version change.
+
 - Fix prototype snapshot validation and empty native command payloads; add bounded missing-acknowledgment and ownership-uncertainty diagnostics.
 - Prepare updated human dedicated-server readiness procedure. Offline evidence only; runtime gates unchanged.
 

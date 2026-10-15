@@ -115,3 +115,7 @@ For ownership tests use a separate disposable session after baseline speed tests
 | Successful Build 42.21 / Kahlua execution | NOT TESTED |
 
 Next milestone: human-operated load/API/admin/hotkey and passive-baseline smoke test on all three peers, followed only if that passes by the fixed transitions and 60-second overwrite/restoration matrix. Keep the separate ownership fault experiment and production G2 decision pending real evidence. G2/G6/G7/G8 remain unchanged.
+
+## Final operator handoff
+
+Use RUNTIME_TEST_RUNBOOK.md for the complete disposable setup/backup/passive-first sequence and launcher hazards; use RUNTIME_EVIDENCE_TEMPLATE.md privately for observations. These supplement this existing experiment, without source or version changes. No test has been executed by the handoff.

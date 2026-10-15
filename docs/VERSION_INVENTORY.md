@@ -33,3 +33,5 @@ Current documentation mirrors are complete. Absent future executable/release mir
 Current isolated proof mirrors: docs/ISOLATED_SPEED_PROOF.md header, proof/B47ANCEDActiveHoursSpeedProof/42/mod.info modversion, and its shared B47AHProof.lua P.Version. Game minimum 42.21 is a game version, not a project mirror.
 
 2026-10-14 readiness checkpoint: canonical/current mirror headers advance to 0.1.0-dev.3. Dated readiness/validation/version-decision entries that name dev.2/dev.3 record the actual evidence iteration and are historical, not extra canonical mirrors. Fixed helper examples and synthetic test versions remain independent. Current procedure references the header/root version.
+
+Final runtime preparation adds current-version headers in docs/RUNTIME_TEST_RUNBOOK.md and docs/RUNTIME_EVIDENCE_TEMPLATE.md to the machine inventory. Filled evidence belongs outside the repository and retains its actually tested version. Canonical version remains unchanged for documentation-only preparation.
