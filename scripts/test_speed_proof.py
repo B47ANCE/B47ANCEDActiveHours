@@ -466,6 +466,15 @@ class SpeedProofTests(unittest.TestCase):
         self.assertFalse(list(root.parent.rglob('*.jar')))
         self.assertFalse(list(root.parent.rglob('*.java')))
 
+    def test_enrollment_send_error_stops_without_writes(self):
+        n = Network()
+        n.peers['S'].execute('function sendServerCommand(...) error("mock enroll error") end')
+        n.peers['A'].globals().B47AHProof.select(7)
+        n.flush()
+        s = n.peers['S'].globals().B47AHProof.ServerState
+        self.assertEqual(s.reason, 'enrollment-send-error')
+        self.assertEqual(n.peers['A'].globals().Z.writes, 0)
+
 
 if __name__ == '__main__':
     unittest.main()

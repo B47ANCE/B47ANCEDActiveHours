@@ -20,6 +20,6 @@ G2 Lua architecture BLOCKED; Phase B executable Lua speed proof NOT STARTED; G6 
 
 Approved initial project version is recorded in root VERSION. See docs/VERSION_POLICY.md and docs/VERSION_INVENTORY.md. Historical game/tool versions are separate. No release artifacts exist; gameplay remains blocked.
 
-Prepared isolated experiment: [installation, operator controls and dedicated matrix](docs/ISOLATED_SPEED_PROOF.md). Source under proof/ uses a distinct diagnostic Mod ID; production Core/Night/Day remain absent. Thirty-five actual-Lua mock tests per Lua 5.1/5.4 engine are offline only. Runtime gates stay unchanged.
+Prepared isolated experiment: [installation, operator controls and dedicated matrix](docs/ISOLATED_SPEED_PROOF.md). Source under proof/ uses a distinct diagnostic Mod ID; production Core/Night/Day remain absent. Thirty-six actual-Lua mock tests per Lua 5.1/5.4 engine are offline only. Runtime gates stay unchanged.
 
 Current checkpoint adds readiness fixes; G2 blocks production approval and does not block isolated prototype validation. Follow docs/ISOLATED_SPEED_PROOF.md for human installation and three-peer procedure; no automatic deployment/launch.

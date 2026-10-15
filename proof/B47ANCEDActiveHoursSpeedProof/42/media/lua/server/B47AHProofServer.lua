@@ -70,7 +70,9 @@ local function command(module, cmd, player, args)
         if s.id or not P.integer(args.id,0,32767) then reject(); return end
         s.operator=player; s.lastIntent=args.intent
         s.id=args.id; s.epoch=s.epoch+1
-        sendServerCommand(P.Module,"Arm",{id=s.id,epoch=s.epoch}) -- Enrollment only; no mutation broadcast.
+        -- Enrollment only; no mutation broadcast. Failure is diagnostic, never a retry.
+        local sent=pcall(sendServerCommand,P.Module,"Arm",{id=s.id,epoch=s.epoch})
+        if not sent then s.counts.errors=s.counts.errors+1; P.freeze(s,"enrollment-send-error") end
         return
     end
     if cmd ~= "Set" and cmd ~= "Restore" then reject(); return end
