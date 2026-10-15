@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.0-dev.3]
+
+- Fix prototype snapshot validation and empty native command payloads; add bounded missing-acknowledgment and ownership-uncertainty diagnostics.
+- Prepare updated human dedicated-server readiness procedure. Offline evidence only; runtime gates unchanged.
+
 ## [0.1.0-dev.2]
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
 - Offline branding/version checks only; earlier validation remains historical at 0.1.0-dev.1. No new SP/dedicated MP evidence.

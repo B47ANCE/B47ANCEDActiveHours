@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.2
+Project Version: 0.1.0-dev.3
 
 # Current Lua-only blockers — controlling status
 
@@ -87,3 +87,11 @@ User authorized a bounded Lua implementation at 0.1.0-dev.1. See ISOLATED_SPEED_
 Critical handoff gap remains explicit: independent native authorization may be delayed, allowing an old owner a local write before revocation; server rejects stale acknowledgment, while native packet rejection must be verified dedicated. No full distributed atomicity, persistent ID, late-join/reconnect or restart recovery is claimed. Native scalar-unit asymmetry, animation behavior, overwrites, helper equivalence and connected restoration remain runtime gates. Production G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED unchanged. Phase B source prepared, PZ runtime execution NOT STARTED; no PASS.
 
 Protocol is a flat-argument diagnostic Lua command exchange under the user's explicit prototype authorization, not a production packet/identity design. Missing route or acknowledgment freezes pending writes; invalidation can block restoration and must be recorded as failure. No observer correction, continuous override, native activity manipulation, sandbox mutation, population scan, deployment or launch.
+
+## Current readiness status — 0.1.0-dev.3 / 2026-10-14
+
+Safe isolated development continues despite production G2. Prototype defects reproduced and fixed offline: empty Restore/Dump tables omitted by native transport; malformed walk/category snapshot accepted by nil equality; no bounded missing-ack evidence; duplicate admin intents lacked identity. Added explicit stops on pending/unobserved ownership uncertainty, bounded diagnostic reasons and controlled-rollback tests. Lua 5.1 and 5.4 execution in mocks is STATIC/OFFLINE PASS, not Kahlua or PZ proof.
+
+Remaining blockers: actual loader/API/hotkey/role execution; real movement/sprinting and animation; native packet scalar asymmetry and overwrite behavior; actual stale-input rejection and effects through later ownership; connected behavioral restoration; peer effective-class provenance; reconnect/persistence/general-population support. Stale native authorization race remains explicit. Runtime gates unchanged: G2 BLOCKED (production architecture), G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. Phase B source prepared, PZ runtime pending. Recommended next milestone is the human-run passive/load smoke test followed by the fixed-speed matrix, not production solar/profile expansion.
+
+The handoff's old Desktop/Repositories path is absent; verified working copy is Desktop/Work/Project Zomboid/Mod Repositories/B47ANCEDActiveHours. No restart, discarded research, deployment, launch, save edits or Workshop/package operation occurred.

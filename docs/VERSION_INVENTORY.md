@@ -1,6 +1,6 @@
 # Version inventory
 
-Project Version: 0.1.0-dev.2
+Project Version: 0.1.0-dev.3
 
 Root VERSION is the sole authority; version-inventory.json declares exact mirrors and selectors. Current mirrors must exist and contain one matching Project Version header:
 
@@ -31,3 +31,5 @@ Game builds, Java/tool/dependency versions, framework provenance and inventory s
 Current documentation mirrors are complete. Absent future executable/release mirrors are separately deferred; this milestone does not advance G2, G6, G7 or G8.
 
 Current isolated proof mirrors: docs/ISOLATED_SPEED_PROOF.md header, proof/B47ANCEDActiveHoursSpeedProof/42/mod.info modversion, and its shared B47AHProof.lua P.Version. Game minimum 42.21 is a game version, not a project mirror.
+
+2026-10-14 readiness checkpoint: canonical/current mirror headers advance to 0.1.0-dev.3. Dated readiness/validation/version-decision entries that name dev.2/dev.3 record the actual evidence iteration and are historical, not extra canonical mirrors. Fixed helper examples and synthetic test versions remain independent. Current procedure references the header/root version.

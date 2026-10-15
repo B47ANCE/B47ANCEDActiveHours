@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.2
+Project Version: 0.1.0-dev.3
 
 ## Versioning initialization — 2026-10-08
 
@@ -209,3 +209,28 @@ Server state is session-only for a continuously loaded object. No persistent ide
 Mock execution engine is Lua 5.4 via lupa, not PZ Kahlua. A read-only static check rejected forbidden activity/helper/scan calls and sandbox assignments, verified exact shared require paths, no proof Java/JAR files and no case-colliding proof filenames. Static PASS does not prove Linux/PZ loading. Runtime category labels use strict known slow1-3, sprint1-5 and 1-5 patterns; unknown variants block the experiment.
 
 Git bookkeeping: pre-first-push freshness helper returned UNKNOWN because the new feature branch had no upstream. The parent had been verified, but this was not a branch freshness PASS. After establishing its tracking branch, fresh fetch/check returned PASS: a07163a29d1862c87246b879132a531788f36a09 equals remote head, clean, zero ahead/behind feature upstream and two ahead/zero behind main. No reconciliation or history rewriting occurred. PR preparation is stacked on unmerged PR #5; it does not merge that research automatically.
+
+## Prototype readiness fixes — 2026-10-14 / 0.1.0-dev.3
+
+Starting source: clean feature/isolated-lua-speed-proof at 085aba615122b8de62339d221c63ad12a2ed2622, equal to its public upstream, six ahead/zero behind main; freshness PASS. Actual canonical version was 0.1.0-dev.2, matching the new handoff. Its old Desktop/Repositories path does not exist; existing Desktop/Work/Project Zomboid/Mod Repositories/B47ANCEDActiveHours retained as source of truth. The new fix/lua-proof-readiness branch tracks the verified feature upstream until first push. PR #5/#6 are not merged by this work. Existing fallback artwork and historical research were preserved.
+
+[TESTED offline baseline] Before edits, version consistency PASS, nine version tests PASS and sixteen Lua mock tests PASS. Those mocks preserved empty Lua tables across transport and missed a native compatibility defect. Reproduction updated the mock to omit empty tables (GameClient.java:1897; GameServer.java:2357). Before source fixes, the eighteen-test suite had five failures: three restoration/control paths plus nonempty-session payload and malformed snapshot validation. This is a deterministic offline reproduction, not a PZ runtime observation.
+
+Root causes and fixes: nil walk/category could compare equal and be accepted; now both are explicitly required with recognized mapping. Empty Restore/Dump tables arrive nil natively; all client requests now carry epoch, mutation intents add monotonic IDs and are bound to the selecting admin. Added one-shot acknowledgment deadline and explicit stop on pending/unobserved ownership change; no retry or speed reapply. Read-only evidence remains available after freeze. API/send/rollback failures now have bounded result records and counters. Owner-reported fields are labeled separately from native server samples. No distributed-atomicity claim: delayed revocation still permits an old local write in the retained fault test.
+
+Exact validation commands from the verified repository root:
+
+```powershell
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/check_versions.py --root .
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_check_versions.py
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_speed_proof.py
+$env:B47_PROOF_LUA='54'
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_speed_proof.py
+Remove-Item Env:\B47_PROOF_LUA
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' research/test_bytecode_index.py
+git diff --check
+```
+
+Results after fixes: version consistency PASS; nine version tests PASS; thirty-five Lua proof tests PASS in each of Lua 5.1 and Lua 5.4 via existing lupa 2.6; five retained decoder tests PASS. No new dependency or Kahlua execution. All three actual Lua files are parsed/executed in the mock harness with both engines; this is not native API/network proof. Static layout/Mod ID/common+42/shared-client-server placement, case-correct require and no case collision/forbidden-call/sandbox-write/Java-JAR checks PASS. Existing archival source/hash preservation test PASS; source research unchanged. No packaging check is claimed: --release artifacts remain absent and G8 blocked.
+
+Readiness assessment and exact manual install/operator/failure procedure: ISOLATED_SPEED_PROOF.md. Next milestone is human load/API/role/key smoke validation and passive baseline on one disposable dedicated server/two clients, then fixed transition/60-second overwrite/restoration, and separate ownership-fault sessions. No actual runtime results or current logs exist for this new source, so prior logs were not substituted as evidence and no server/SFTP/save files were accessed. G2 BLOCKED (production), G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. Safe isolated research/testing is allowed. No installation, launch, deployment, save edit, Workshop publication or release package.

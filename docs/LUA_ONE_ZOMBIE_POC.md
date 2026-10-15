@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.2
+Project Version: 0.1.0-dev.3
 
 # Minimal Lua-only one-zombie proof design
 
@@ -57,3 +57,9 @@ If later evidence cannot supply complete reversible category control through exp
 ## User-authorized prepared source
 
 The latest request authorizes an isolated executable Lua experiment. Its bounded alternative avoids the full category helpers and touches only walkType, derived category and scalar, with a captured baseline and one-shot failure rollback. Earlier full-helper restoration entry requirements remain for production/full profile behavior; they do not describe this narrower experimental setter surface. The dedicated human test, controlled-restoration limits and delayed-authority failure are documented in ISOLATED_SPEED_PROOF.md. No game execution, deployment or gate PASS.
+
+## Test-ready diagnostic checkpoint — 0.1.0-dev.3
+
+The existing prototype is retained and improved; G2 is production architecture approval, not a ban on isolated experiments. Fixed malformed snapshots, native empty-argument transport and duplicate admin intents. Added 300-OnTick one-shot acknowledgment deadline (technical safety bound, not a gameplay setting), reasoned STOP records and bounded request/result evidence. These monitors never rewrite speed or retry commands. Sampling continues after mutation freeze to preserve evidence.
+
+Current operator procedure and capability classifications are in ISOLATED_SPEED_PROOF.md. First verify load, all API reads, role/hotkeys and passive server/owner/observer baseline; then three fixed transitions with actual motion/animation, 60-second overwrite observation and connected restoration. Use a separate session for idle ownership transfer and another for the pending-transfer fault. Old A's owner-revoked freeze is expected after transfer; B can mutate only if server remains valid and native B authorization is current. Server STOP requires ending mutation testing, not bypassing flags. Existing stale-revocation race is not solved by mocks. No production systems added or runtime gates advanced.
