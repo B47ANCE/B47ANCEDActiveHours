@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.0-dev.2]
+- Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
+- Offline branding/version checks only; earlier validation remains historical at 0.1.0-dev.1. No new SP/dedicated MP evidence.
+
 ## [0.1.0-dev.1]
 
 - Initialize user-approved canonical project version, SemVer policy, inventory and development-only checker.

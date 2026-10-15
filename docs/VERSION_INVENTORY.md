@@ -1,6 +1,6 @@
 # Version inventory
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.2
 
 Root VERSION is the sole authority; version-inventory.json declares exact mirrors and selectors. Current mirrors must exist and contain one matching Project Version header:
 

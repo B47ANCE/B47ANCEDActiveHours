@@ -49,7 +49,7 @@ Require valid canonical SemVer and inventory; synchronized metadata/code/docs/cu
 
 ## Project adoption — B47ANCE'd Active Hours
 
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.2
 
 User approved initial development version on 2026-10-08. This initializes versioning for research; it is not a gameplay release or a compatibility claim. No previous project version exists. An eventual stable 0.1.0 is conditional, not approved for release. Further checkpoints require deliberate version decisions; this milestone does not automatically bump versions.
 
