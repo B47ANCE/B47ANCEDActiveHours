@@ -2,6 +2,8 @@
 
 ## [0.1.0-dev.3]
 
+- Use the user-supplied Active Hours artwork as the project thumbnail; preserve original PNG bytes and fallback icon/poster assets. No gameplay or runtime gate change.
+
 - Complete final static review and passive-first runtime runbook/evidence template; document launcher/environment hazards. No Lua source or version change.
 
 - Fix prototype snapshot validation and empty native command payloads; add bounded missing-acknowledgment and ownership-uncertainty diagnostics.

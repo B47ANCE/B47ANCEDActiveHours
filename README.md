@@ -2,6 +2,10 @@ Project Version: 0.1.0-dev.3
 
 # B47ANCE'd Active Hours
 
+![B47ANCE'd Active Hours project thumbnail](thumbnail.png)
+
+Project artwork: [thumbnail source and provenance](docs/BRANDING.md).
+
 Mod ID: `B47ANCEDActiveHours`
 Target: Project Zomboid Build 42.21
 Status: isolated Lua-only experimental source prepared; production gameplay BLOCKED.
