@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.3
 
 # Lua multiplayer authority feasibility
 
@@ -39,3 +39,21 @@ First proof is deliberately one continuously loaded zombie with two clients. Han
 [INFERRED] Current owner player is a narrow routing candidate on server, subject to verified current identity/owner and native connection association. Pending intent must remain unapplied during null/disconnected route or ownership uncertainty. Completion needs observable owner/native state evidence, but no acknowledgment schema or retry protocol is approved until command/authorization ordering is measured. Clients cannot choose categories or thresholds.
 
 [VERIFIED source] OnZombieUpdate can reach observers; native activity update precedes the event. No event implies server authority or post-network readiness. A read-only event filter may observe the selected zombie; profile application still requires a separate verified owner boundary and transition-only dispatch. Missing event coverage must be reported, not filled with unsupported global scans or per-frame writes.
+
+## Isolated command experiment prepared
+
+The user authorized diagnostic flat Lua commands and a one-object epoch/revision model, not a persistent packet protocol. Server admin intent routes to current owner player; client validates native local ownership immediately before the synchronous setter batch; server rejects stale-owner acknowledgments. Mocks show a delayed native revocation can still permit a former local owner write. Native server sender checks should reject its data, but dedicated verification is missing. G2 remains BLOCKED. Observer is never commanded to write. No late-join/restart/reconnect support; invalidation freezes the test. See ISOLATED_SPEED_PROOF.md for precise restrictions.
+
+## Ownership sequence and readiness guards — 0.1.0-dev.3
+
+[VERIFIED retained source] Server NetworkZombieManager.java:188-210 updates old/new connection associations, native owner/player, speed limiter and extra-update scheduling. NetworkZombiePacker.java:142-184 updates authorization before per-peer synchronization. ZombieListPacket.java:34-41 replaces the client's authorization list; NetworkZombieSimulator.java:130-174 calls becomeLocal/becomeRemote to set/clear native owner/player and restore the path target. No dedicated Lua ownership-transition event was established: this prototype observes current native information at OnZombieUpdate/command receipt, not an atomic handoff callback. Exact dispatch timing relative to Lua command streams remains UNKNOWN.
+
+[VERIFIED source] NetworkZombiePacker.java:100-117 rejects an owner input if the sender connection differs from the server's current native owner. This supports a stale-packet rejection hypothesis, not runtime evidence. Whether late local fields affect an observer, survive a later transfer back, or alter native simulation remains UNKNOWN until dedicated traces. Never infer no harm from an acknowledgment rejection.
+
+Readiness fixes: server binds mutation control to the selecting admin, session and monotonic intent IDs; clients accept monotonic apply revisions and native local-owner checks. Empty native tables are omitted (GameClient.java:1897, GameServer.java:2357), so nonempty session payloads are required even for Restore/Dump. Duplicate admin intents cannot dispatch again. Outstanding-command owner change, unobserved/null owner at dispatch, owner change at acknowledgment, missing-ack deadline or API/send errors stop future server mutations. A former owner becomes permanently mutation-disabled after observed local revocation but can continue read-only samples. Idle, observed A->B transfer remains experimentally testable; no automatic retry, replay or hand-back recovery.
+
+[TESTED offline] Delayed native revocation STILL allows an old locally authorized peer to write; server rejects its stale acknowledgment and halts further dispatch. Deadline/STOP cannot recall an in-flight command. These limitations are preserved and exposed, not described as resolved. No client-supplied owner identity is trusted. Late joins/reconnects/restarts and persistent identity remain unsupported for this bounded experiment.
+
+## Human evidence handoff — 2026-10-14
+
+Final review preserves existing local-owner/session/operator/intent/revision guards and explicit pending-transfer/deadline stops. No client-count/ready-ack barrier is implemented: one server and two prepared clients is a checked human precondition. Observer Lua revision can remain zero because Apply is owner-targeted; compare native observations, not equality of every peer Lua revision. Source/mocks cannot establish native rejection or absence of later stale-field propagation. RUNTIME_TEST_RUNBOOK.md separates idle transfer from pending-transfer faults; RUNTIME_EVIDENCE_TEMPLATE.md distinguishes owner report, server/observer evidence and unknowns. No ownership race resolved or gate advanced.

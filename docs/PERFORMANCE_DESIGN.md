@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.3
 
 # Current Lua-only performance constraints
 

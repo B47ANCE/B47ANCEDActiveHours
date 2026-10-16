@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.3
 
 # Lua-only API audit
 
@@ -27,3 +27,9 @@ No Java agents, third-party loaders, replacement classes, installed binary chang
 [VERIFIED source] IsoZombie.java:845-854 registers shouldSprint as a callback that can setTarget(null) while evaluating it. It is target intent, not a getter for speed category or lunger. Avoid arbitrary animation-variable reads as passive diagnostic substitutes. Public isCrawling :4138 and isDead (IsoGameCharacter.java:4936) are candidate safety predicates, not a complete registration/ownership proof. No supported lunger getter/setter pair was found in the targeted IsoZombie source inspection; normal Lua instance-field assignment remains disallowed.
 
 [UNKNOWN] Actual Lua event/getter availability, every lifecycle path, observation across server indoor states, and a supported stable object lookup after event gaps. IsoCell is exposed (LuaManager$Exposer.java:2314), but its implementation was not in the retained source set inspected here; no indexed lookup or full-world traversal guarantee is assumed. No runtime prototype is enabled.
+
+## Additional exposed surface does not complete rollback
+
+[VERIFIED source / TESTED offline method metadata] IsoSpriteInstance is exposed at LuaManager$Exposer.java:2278; IsoGameCharacter.getSpriteDef is public but may allocate. Its public concrete API includes getFrame()F and setFrameSpeedPerFrame(F)V, not a matching frame-rate getter. The setter reads a multiplier and writes animFrameIncrease. No named lunger/walkVariant accessor pair was found in the targeted concrete-method surface of IsoZombie/IsoGameCharacter; this is a bounded census, not proof against arbitrary reflective/native/other APIs. Those alternatives are not authorized ordinary-Lua bridges. See restoration matrix in LUA_SPEED_CONTROL.md.
+
+[UNKNOWN] Normal Lua invocation, exact lifetime/null behavior, every inherited/engine path, actual rendering influence and runtime recovery. No custom Java or game modifications are introduced.

@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.1
+Project Version: 0.1.0-dev.3
 
 # Lua speed control feasibility
 
@@ -60,3 +60,32 @@ All paths below are retained research/jar-source references, not runtime evidenc
 ## Passive observation limits
 
 [VERIFIED source] shouldSprint callback (IsoZombie.java:845-854) can clear a target during evaluation and reflects target/sound intent rather than speed category. It is excluded from passive telemetry and restoration snapshots. OnZombieUpdate :2900 occurs after native updateActiveState :2829; using it does not bypass native ordering or make profile writes durable. No event-only per-frame speed adapter is approved. Actual supported getter/event calls remain a runtime gate.
+
+## Restoration API surface — 2026-10-14
+
+[VERIFIED source] Category helpers mutate more than category: scalar, walkVariant, def.animFrameIncrease and sometimes lunger/normal turnDelta. Public getter/setter exposure is required for every captured state item; Java public instance fields do not qualify.
+
+| State | Source-supported ordinary-method candidate | Restoration verdict |
+|---|---|---|
+| speedMod | IsoGameCharacter.java:3771 getSpeedMod / :3775 setSpeedMod | Matching scalar pair only; no category/animation guarantee. |
+| walkType/category | IsoZombie.java:5055 getWalkType / :3371 setWalkType / :3388 setSpeedTypeFromWalkType | Can restore category derived from a recognized walk type without category reroll; enum/packet and full behavior remain runtime gates. |
+| normal turnDelta | IsoZombie.java:4444 getter / inherited IsoGameCharacter.java:12484 setter | Matching normal-field pair; native peer propagation is not proven. |
+| running | IsoGameCharacter.java:12366 isRunning / :12373 setRunning | Getter can mask the raw flag when endurance moodle >=3; not an unconditional raw snapshot pair. Applicability of that branch to a zombie is UNKNOWN. |
+| lunger / walkVariant | Fields/helper writes in IsoZombie | No corresponding named public concrete getter/setter found in the targeted IsoZombie/IsoGameCharacter method census. Complete restoration unresolved. |
+| animation rate | IsoSpriteInstance.setFrameSpeedPerFrame(F)V is public; IsoGameCharacter.getSpriteDef :6378 exposed object accessor | Setter multiplies input by static multiplier before assigning animFrameIncrease. No public rate getter found in IsoSpriteInstance concrete-method census; getFrame() is frame position, not frame rate. Direct instance-field access is not approved. |
+
+[TESTED offline bytecode] Main-JAR IsoSpriteInstance.setFrameSpeedPerFrame reads multiplier at offset 2, fmul at 5, writes animFrameIncrease at 6. Setting a guessed constant is not restoration. IsoSpriteInstance is registered for Lua exposure (LuaManager$Exposer.java:2278), but exposure does not supply missing methods or verify actual invocation. getSpriteDef creates a sprite instance when def is null (:6379-6381), so omit it from the first passive baseline. No reflection, setter-only guess, native stats reroll or temporary object replacement is an acceptable recovery mechanism.
+
+[INFERRED alternative for future approval] A scalar-only getSpeedMod/setSpeedMod experiment would avoid calling category helpers and their extra randomization, but changes feature scope, retains native overwrite/network-unit/global-sprint issues, and is not an approved adapter. Do not silently substitute it for fixed Sprinter/Shambler profiles. The current category proof remains conditional; only read-only baseline design can progress independently of complete rollback.
+
+## Prepared narrow-setter experiment
+
+ISOLATED_SPEED_PROOF.md now implements reversible walkType/category/scalar changes, deliberately omitting full category helpers, sprite/lunger/turnDelta writes and continuous overrides. This is a test of movement-speed feasibility, not full native preset equivalence. Scalars 0.60/0.90 are fixed experiment inputs. Controlled restoration covers directly written fields; actual motion/animation recovery is a runtime test. Source mapping is Sprinter=1, FastShambler=2, Shambler=3. No runtime gate advances.
+
+## Readiness correction — 0.1.0-dev.3 / 2026-10-14
+
+Isolated development continues while G2 blocks production approval. Existing walk/category/scalar architecture is preserved. Corrected ordinary-Lua validation so absent walk/category cannot pass nil equality; the snapshot path likewise rejects malformed native reads without crashing sample output. Fixed empty native command arguments by adding session metadata to every request, so controlled restoration and server dump no longer depend on an empty table surviving transport. Direct-field restoration and failed-setter rollback pass Lua 5.1 and 5.4 mocks; actual movement, animation and native overwrite outcomes remain NOT TESTED. No native activity, full category helper, sprite or additional attribute writes were added. See ISOLATED_SPEED_PROOF.md for the exact human procedure.
+
+## Final runtime preparation — 2026-10-14
+
+No new demonstrated Lua defect in the final static/source review; speed source remains unchanged. Mapping, narrow setters, no continuous correction and bounded restoration behavior remain as previously audited. Current runbook RUNTIME_TEST_RUNBOOK.md requires passive native/API/owner/scalar agreement before any speed request, then actual motion/animation/pursuit/pathfinding and 60-second overwrite measurements. Original restoration fields come from the first server DISPATCH observation, not an assumed nominal preset. Quantization tolerance does not excuse a 1000-like scalar anomaly or changed behavior. No new runtime evidence.
