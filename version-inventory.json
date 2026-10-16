@@ -81,6 +81,10 @@
     {
       "path": "docs/RUNTIME_EVIDENCE_TEMPLATE.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/BRANDING.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -118,6 +122,10 @@
     }
   ],
   "historical": [
+    {
+      "reference": "docs/BRANDING.md: preserved fallback authoring record",
+      "reason": "Retains the actual 0.1.0-dev.2 artwork provenance; the current Project Version header is inventoried separately"
+    },
     {
       "reference": "docs/API_AUDIT.md",
       "reason": "Preserved audit body; unassigned version describes original evidence"

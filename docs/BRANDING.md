@@ -1,3 +1,19 @@
+Project Version: 0.1.0-dev.3
+
+# Active Hours project thumbnail
+
+Selected by the user on 2026-10-15: the custom Active Hours clock/zombie artwork. Authoritative source: `assets/branding/ActiveHoursThumbnail.png`. Project thumbnail: root `thumbnail.png`, mirrored byte-for-byte and shown in README. Both are the supplied 1254x1254 PNG (1,538,317 bytes), without cropping, resizing or regeneration.
+
+SHA-256: `04cc30dd9d6a0bb5ecb404853df9756aff6f8c344b2ef3d7775ab83c6fba7849`.
+
+The custom thumbnail takes precedence over `assets/branding/B47_THUMBNAIL.png`. Existing fallback thumbnail, 64x64 icon and 128x128 poster remain unchanged. This selects repository artwork only; no Workshop item, production mod metadata or release package is created. Workshop upload and in-game appearance are NOT TESTED.
+
+This is a compatible artwork-only edit within the existing unreleased development checkpoint, not a new SemVer milestone. Gameplay, configuration, save format and Lua source are unchanged. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
+
+The original fallback authoring record below is historical at its recorded version; its wording and hashes are preserved, and do not identify the current selected thumbnail or canonical project version.
+
+---
+
 # Fallback artwork
 
 Current authoring version: 0.1.0-dev.2

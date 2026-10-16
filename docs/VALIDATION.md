@@ -263,3 +263,22 @@ git diff --check
 Changed surfaces: new RUNTIME_TEST_RUNBOOK.md and RUNTIME_EVIDENCE_TEMPLATE.md, their current-header version inventory entries, and links/dated preparation notes in README, CHANGELOG, ISOLATED_SPEED_PROOF, LUA_SPEED_CONTROL, LUA_MULTIPLAYER_AUTHORITY, LUA_ONE_ZOMBIE_POC, TEST_PLAN, RELEASE_BLOCKERS, VALIDATION and VERSION_INVENTORY. Lua/mod.info/game files, existing artwork, research, historical validation sections and root VERSION are unchanged. The evidence template is blank/NOT EXECUTED; filled logs/backups belong privately outside the repository.
 
 G2 production architecture BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Human passive smoke is the next milestone, not expanded gameplay. No directory/cache creation, installation, game/server launch, save access/modification, launcher editing, deployment, Workshop action or package creation was performed.
+
+## User-selected project thumbnail — 2026-10-15 / existing 0.1.0-dev.3
+
+Artwork-only edit on artwork/custom-project-thumbnail, based on the verified merged research/lua-restoration-surface-audit branch at 8c07eced04acb30e901889979f5f1572ffd0f02e. The supplied custom Active Hours PNG is retained as assets/branding/ActiveHoursThumbnail.png and copied byte-for-byte to root thumbnail.png. README now displays the project thumbnail; docs/BRANDING.md records current selection and preserved fallback authoring provenance. No gameplay/configuration/API/save contract change, so this small edit stays within the current unreleased checkpoint rather than inventing a new version.
+
+[TESTED offline / artwork] Both selected copies: PNG, 1254x1254, 1,538,317 bytes, SHA-256 04cc30dd9d6a0bb5ecb404853df9756aff6f8c344b2ef3d7775ab83c6fba7849, exactly matching the supplied file. A one-off Python stdin check used hashlib and PIL.Image.verify() for both files; all checks PASS. Visual inspection of the copied thumbnail matches the selected clock/zombie artwork. No resize, crop or regeneration. All three existing B47 fallback PNG hashes remain unchanged.
+
+Exact repository validation commands (bundled Python):
+
+```powershell
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/check_versions.py --root .
+& 'C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' scripts/test_check_versions.py
+git diff --exit-code -- proof scripts VERSION research
+git diff --check
+```
+
+Version consistency PASS before/after; nine version tests PASS, including historical evidence preservation. An initial fixture failure exposed that the test assumes README is the first inventory mirror; the new branding mirror was appended to preserve existing inventory ordering, then all nine passed without changing tests/checker. New current branding header and historical fallback record are classified separately. Missing dist/current/*.zip remains a deferred packaging note; no artifact check claimed. Git CRLF conversion notices are metadata-only. Existing proof tests were not repeated for an artwork-only edit; prior Lua mock evidence remains tied to its recorded source. No PZ/Kahlua/SP/dedicated runtime result is added.
+
+Changed files: thumbnail.png, assets/branding/ActiveHoursThumbnail.png, README.md, CHANGELOG.md, docs/BRANDING.md, docs/VERSION_INVENTORY.md, version-inventory.json and this validation record. Source Lua, tests, root VERSION, fallback assets and historical research remain unchanged. No installation, launch, packaging, deployment or publication. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
