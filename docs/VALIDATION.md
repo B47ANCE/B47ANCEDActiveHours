@@ -1,5 +1,9 @@
 Project Version: 0.1.0-dev.4
 
+Current ownership: this project is absorbed into MORTIS; see [ABSORBED_BY_MORTIS.md](ABSORBED_BY_MORTIS.md). The following standalone source/runtime evidence remains historical at its actual version. No gate advances.
+
+[TESTED offline, documentation-only consolidation 2026-10-16] `python scripts/check_versions.py --root .` PASS; `python scripts/test_check_versions.py` 9 tests PASS. Standalone Lua, metadata, artwork and published provenance are unchanged. No new runtime result.
+
 ## Nightfall/MORTIS alternative — 2026-10-16
 
 ### Verified Workshop test distribution

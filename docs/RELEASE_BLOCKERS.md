@@ -1,5 +1,7 @@
 Project Version: 0.1.0-dev.4
 
+Current ownership: this project is absorbed into MORTIS; see [ABSORBED_BY_MORTIS.md](ABSORBED_BY_MORTIS.md). The following standalone source/runtime evidence remains historical at its actual version. No gate advances.
+
 # Current Lua-only blockers — controlling status
 
 ## Current Nightfall-style alternative — 2026-10-16

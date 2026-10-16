@@ -1,5 +1,7 @@
 Project Version: 0.1.0-dev.4
 
+> **Absorbed by M.O.R.T.I.S.** All future development, including Active Hours policy, lives in [Project MORTIS](https://github.com/B47ANCE/ProjectMORTIS). See [migration and preserved history](docs/ABSORBED_BY_MORTIS.md). The code and Workshop item below describe the historical standalone dev.4 experiment. Runtime gates are unchanged.
+
 # B47ANCE'd Active Hours
 
 ![B47ANCE'd Active Hours project thumbnail](thumbnail.png)
