@@ -1,6 +1,8 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # Repository governance
+
+Current isolated source: proof/B47ANCEDActiveHoursMortisProof/42/, Mod ID B47ANCEDActiveHoursMortisProof, with common/. Requires ProjectMORTIS/experienceWorks; no dependency implementation is bundled. The original proof and its spec/runbook/form are frozen historical dev.3 artifacts and must not enter the new payload. Production Core/Night/Day remain absent. No Workshop ID has yet been assigned; new-item creation is user-authorized but not claimed completed here.
 
 Canonical project version: root VERSION. This is documentation-only research at the canonical development version; onboarding does not change gameplay compatibility or justify a version bump.
 

@@ -1,5 +1,7 @@
 # Project version policy
 
+Development decision 2026-10-16: target 0.1.0-dev.4 for the user-requested Nightfall/MORTIS mechanism. This is a compatible experimental capability addition (MINOR classification for a stable contract), advancing the checkpoint within the existing unreleased 0.1.0 target. The original standalone dev.3 proof stays frozen and explicitly historical. The new diagnostic has its own Mod ID and declared Lua framework dependencies; no stable release or runtime gate is approved.
+
 This is the authoritative version policy supplied by the PZ AI Development Framework. Project copies inherit it as a local policy; other instructions summarize or reference it. This policy does not weaken multiplayer/server-authority, sandbox or dedicated-runtime gates.
 
 ## One canonical Project Version
@@ -49,7 +51,7 @@ Require valid canonical SemVer and inventory; synchronized metadata/code/docs/cu
 
 ## Project adoption — B47ANCE'd Active Hours
 
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 User approved initial development version on 2026-10-08. This initializes versioning for research; it is not a gameplay release or a compatibility claim. No previous project version exists. An eventual stable 0.1.0 is conditional, not approved for release. Further checkpoints require deliberate version decisions; this milestone does not automatically bump versions.
 

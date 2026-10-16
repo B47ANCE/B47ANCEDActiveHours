@@ -1,6 +1,8 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # Current Lua-only interpretation
+
+The MORTIS diagnostic adds no production balance configuration. Its three manually requested fixed tiers and priority 20 are technical experiment inputs matching Nightfall API use, not hidden production policy. Vanilla Active Only=Both is read/validated, never written; vanilla Speed is recorded/unchanged. Dependencies: ProjectMORTIS and experienceWorks. See MORTIS_SPEED_PROOF.md. Future meaningful gameplay options remain server-authoritative sandbox settings.
 
 Active/Inactive mean custom speed/behavior profiles, never native inactivity. Current 2026-10-14 policy requires server-authoritative sandbox settings for meaningful gameplay options. The earlier readable-Lua design below is historical and needs reconciliation before implementation; no configuration code exists. Core is neutral; both gameplay modules or vanilla ActiveOnly other than Both disable custom gameplay without changing sandbox values. Safe live restoration remains a blocker.
 

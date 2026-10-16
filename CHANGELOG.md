@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.0-dev.4]
+
+- Add a separate server-side MORTIS speed test using the public locomotion override API used by Nightfall's UV slowing. Require ProjectMORTIS and experienceWorks; preserve the original owner-routed proof at dev.3.
+- Add API negotiation, admin/session/replay checks, read-only clients and bounded native observations. Helper acceptance/release is not native replication or full behavioral restoration proof. Runtime gates unchanged.
+
 ## [0.1.0-dev.3]
 
 - Use the user-supplied Active Hours artwork as the project thumbnail; preserve original PNG bytes and fallback icon/poster assets. No gameplay or runtime gate change.

@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # B47ANCE'd Active Hours
 
@@ -9,6 +9,8 @@ Project artwork: [thumbnail source and provenance](docs/BRANDING.md).
 Mod ID: `B47ANCEDActiveHours`
 Target: Project Zomboid Build 42.21
 Status: isolated Lua-only experimental source prepared; production gameplay BLOCKED.
+
+Current experiment: [Nightfall-style MORTIS speed test](docs/MORTIS_SPEED_PROOF.md), using server-side public locomotion overrides with read-only clients. Source: proof/B47ANCEDActiveHoursMortisProof/. Dependencies: ProjectMORTIS and experienceWorks. [API evidence and limitations](docs/TEAM_API_RESEARCH.md). The original owner-routed dev.3 proof/runbook below are retained historical experiments, not this variant's install instructions. No new PZ runtime success is claimed.
 
 Active and Inactive now mean custom behavior profiles. Zombies retain native detection, pursuit and attacks. The current handoff forbids native activity access/toggles, Java interception, replacement classes, installed binary changes and sandbox mutation.
 

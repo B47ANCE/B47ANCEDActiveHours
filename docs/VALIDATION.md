@@ -1,4 +1,28 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
+
+## Nightfall/MORTIS alternative — 2026-10-16
+
+User requested Nightfall's UV slow mechanism while new Workshop item creation remains authorized. Read-only inspection identified team-owned Nightfall 0.27.3 -> MORTIS 0.23.2/API 1.5.0 -> canonical server overrides. TEAM_API_RESEARCH.md records references/fingerprints/limits. No dependency implementation/assets were copied or changed. New source: proof/B47ANCEDActiveHoursMortisProof/. Original dev.3 proof and original spec/runbook/form are byte-for-byte unchanged and historical. Dependencies: ProjectMORTIS/experienceWorks; no Java/runtime Python.
+
+[TESTED offline] Fourteen new consumer tests PASS per Lua 5.1/5.4 engine via existing lupa; nine version tests PASS, including historical preservation; original 36-test suite PASS on preserved dev.3 code under Lua 5.1. Prior original Lua 5.4 results remain historical. Existing MORTIS test_locomotion_overrides.lua and test_locomotion_adapter_numbers.lua ran directly/read-only under both engines with their native mocks: all four script executions PASS. None is Kahlua/native movement/replication proof.
+
+Exact repository commands (the bundled Python executable recorded below was used):
+
+```powershell
+python scripts/check_versions.py --root .
+python scripts/test_check_versions.py
+python scripts/test_mortis_speed_proof.py
+$env:B47_PROOF_LUA='54'
+python scripts/test_mortis_speed_proof.py
+Remove-Item Env:\B47_PROOF_LUA
+python scripts/test_speed_proof.py
+git diff --exit-code -- proof/B47ANCEDActiveHoursSpeedProof docs/ISOLATED_SPEED_PROOF.md docs/RUNTIME_TEST_RUNBOOK.md docs/RUNTIME_EVIDENCE_TEMPLATE.md
+git diff --check
+```
+
+Current headers/runtime mirrors use dev.4; frozen proof/instructions deliberately retain dev.3. Only server calls MORTIS acquire/release; clients have no native setter or Apply handler. No whole-engine nonwrite claim. Release does not provide original scalar/full-state restoration. Native overwrite, effective owner behavior, observer motion and actual restored behavior remain NOT TESTED. G2 production BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
+
+Publication inputs: docs/WORKSHOP_DESCRIPTION.md and docs/WORKSHOP_CHANGELOG.md, labeled MP testing build - dedicated multiplayer NOT TESTED. Packaging writes only a fresh ignored dist directory, verifies explicit source inventory/ZIP integrity/hashes and records source commit; it never deletes, uploads, installs or launches. Package/upload results must be recorded after execution; no Workshop ID or upload success is invented here. Fallback icon/poster are exact byte copies; selected thumbnail unchanged.
 
 ## Versioning initialization — 2026-10-08
 

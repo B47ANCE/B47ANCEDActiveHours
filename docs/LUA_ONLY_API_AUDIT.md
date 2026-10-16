@@ -1,6 +1,8 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # Lua-only API audit
+
+Current experiment: MORTIS_SPEED_PROOF.md / TEAM_API_RESEARCH.md, using negotiated/typed LocomotionOverrides.acquire/release and Authority.canWriteCanonicalState on server. Native helpers remain the existing source-supported candidates below, not runtime-verified calls. No guessed vanilla API or client-owner bridge is added.
 
 Current authority: the Lua-only handoff of 2026-10-08. This supersedes native interception proposals; it does not invalidate their source observations. Project version initialized; prior source observations are unchanged. G2 BLOCKED; Phase B NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
 
