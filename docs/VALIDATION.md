@@ -1,6 +1,38 @@
-Project Version: 0.1.0-dev.4
+Project Version: 0.1.0-dev.5
 
-Current ownership: this project is absorbed into MORTIS; see [ABSORBED_BY_MORTIS.md](ABSORBED_BY_MORTIS.md). The following standalone source/runtime evidence remains historical at its actual version. No gate advances.
+# Current standalone compatibility validation — 2026-10-16
+
+[TESTED offline] Windows, bundled Python 3.12.14 / Lupa 2.6. New independent compatibility suite: 15 tests PASS in Lua 5.1 and 15 PASS in Lua 5.4. Both current Lua files compile/execute in these mocked hosts. The tests cover standalone admission, exact MORTIS precedence in either list order before its Lua global exists, all three peer-shaped fixtures (not native networking), unknown/invalid/unready detection, entry-gate recheck, duplicate loading, no event/network/mod-list mutation, dependency-free metadata and preserved historical bytes. Flags indicate compatibility admission only; no production gameplay exists.
+
+[TESTED offline] Version consistency PASS; 10 checker tests PASS. A fresh LF checkout exposed the original historical-hash test's CRLF assumption. The test now accepts only an exact reconstruction of the originally hashed Windows document bytes; baseline hashes and historical files are unchanged. Its new regression rejects changed content and refuses normalization of native research evidence. No local research/ exists in this isolated checkout, so proprietary evidence checks are explicitly absent, not falsely verified.
+
+[TESTED offline] Preserved original speed proof: 36 tests PASS under Lua 5.1. Frozen dev.4 MORTIS proof: 14 tests PASS under Lua 5.1. Those results apply to historical prototypes, not the independent compatibility bootstrap. Twenty-one proof/artwork/publication files match the per-file preservation manifest. The original repository and MORTIS import remain intact.
+
+Exact commands from the Active Hours root (verified bundled interpreter `C:\Users\willi\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe`):
+
+```powershell
+python scripts/check_versions.py --root .
+python scripts/test_check_versions.py
+python scripts/test_standalone_compatibility.py
+$env:B47_COMPAT_LUA='54'
+python scripts/test_standalone_compatibility.py
+Remove-Item Env:B47_COMPAT_LUA
+python scripts/test_speed_proof.py
+python scripts/test_mortis_speed_proof.py
+git diff --cached --check
+```
+
+[VERIFIED source] Vanilla client getActivatedMods/size/get usage and installed Steam build 25485521 fingerprints are recorded in MORTIS_COMPATIBILITY.md and docs/evidence/compatibility-25485521.json. [INFERRED] Dedicated shared-global availability/timing; [UNKNOWN] full executed game version and native startup list readiness. Kahlua, actual co-enabled startup, server/two-client disable behavior, join/reconnect/restart and all speed/solar gameplay remain NOT TESTED. No native list or class is modified or loaded by this audit.
+
+Current source is src/B47ANCEDActiveHours/, an independent compatibility bootstrap with no MORTIS dependency. Both proof trees and docs/MORTIS_SPEED_PROOF.md are historical. New standalone output is absent; old dev.4 packages and public payload remain unchanged. No new gameplay configuration, saved state or network protocol is introduced. No native owner correctness, feature completeness or restoration claim is advanced.
+
+G2 BLOCKED, G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. Source/version/secret/whitespace checks are not native compatibility proof. No package, install, game/server launch, deployment or upload occurred. MORTIS changes in this task are documentation-only in a separate worktree; its unrelated feeding development was untouched.
+
+---
+
+## Historical records through 0.1.0-dev.4 (retain actual tested scope)
+
+Current relationship: Active Hours remains maintained standalone; its features are also included in MORTIS. Standalone execution is disabled when MORTIS is enabled. See [MORTIS_COMPATIBILITY.md](MORTIS_COMPATIBILITY.md). No gate advances.
 
 [TESTED offline, documentation-only consolidation 2026-10-16] `python scripts/check_versions.py --root .` PASS; `python scripts/test_check_versions.py` 9 tests PASS. Standalone Lua, metadata, artwork and published provenance are unchanged. No new runtime result.
 
@@ -322,3 +354,5 @@ git diff --check
 Version consistency PASS before/after; nine version tests PASS, including historical evidence preservation. An initial fixture failure exposed that the test assumes README is the first inventory mirror; the new branding mirror was appended to preserve existing inventory ordering, then all nine passed without changing tests/checker. New current branding header and historical fallback record are classified separately. Missing dist/current/*.zip remains a deferred packaging note; no artifact check claimed. Git CRLF conversion notices are metadata-only. Existing proof tests were not repeated for an artwork-only edit; prior Lua mock evidence remains tied to its recorded source. No PZ/Kahlua/SP/dedicated runtime result is added.
 
 Changed files: thumbnail.png, assets/branding/ActiveHoursThumbnail.png, README.md, CHANGELOG.md, docs/BRANDING.md, docs/VERSION_INVENTORY.md, version-inventory.json and this validation record. Source Lua, tests, root VERSION, fallback assets and historical research remain unchanged. No installation, launch, packaging, deployment or publication. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
+
+GitHub offline workflow `.github/workflows/offline.yml` checks versions and the compatibility suite under Lua 5.1/5.4, plus frozen prototype regressions under Lua 5.1. It reuses the MORTIS reviewed action pins, read-only token permissions and checkout with credentials not persisted; development-only lupa is pinned to 2.6. No install, deploy, package, upload or native runtime execution. Workflow availability is not branch-protection enforcement.

@@ -1,4 +1,6 @@
-Project Version: 0.1.0-dev.4
+Project Version: 0.1.0-dev.5
+
+Current standalone scope: [MORTIS_COMPATIBILITY.md](MORTIS_COMPATIBILITY.md). Active Hours remains independent and disables its execution when MORTIS is enabled. Current src/ is a compatibility bootstrap only; no production speed/solar controller or new authority guarantee. MORTIS-dependent proof descriptions below retain their historical scope. Meaningful future gameplay options remain server-authoritative sandbox settings; the mandatory precedence rule is not configurable.
 
 # Current Lua-only interpretation
 

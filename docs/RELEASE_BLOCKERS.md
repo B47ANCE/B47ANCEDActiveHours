@@ -1,8 +1,12 @@
-Project Version: 0.1.0-dev.4
+Project Version: 0.1.0-dev.5
 
-Current ownership: this project is absorbed into MORTIS; see [ABSORBED_BY_MORTIS.md](ABSORBED_BY_MORTIS.md). The following standalone source/runtime evidence remains historical at its actual version. No gate advances.
+Current relationship: Active Hours remains maintained standalone; its features are also included in MORTIS. Standalone execution is disabled when MORTIS is enabled. See [MORTIS_COMPATIBILITY.md](MORTIS_COMPATIBILITY.md). No gate advances.
 
-# Current Lua-only blockers — controlling status
+# Current standalone compatibility milestone
+
+New src/ contains only an independent read-only compatibility bootstrap. Gameplay (including standalone speed authority, solar/profile/range systems and complete MORTIS parity) remains unimplemented/gated. Both old proof trees remain frozen history. Co-enabled/unknown detection is inactive by source/offline behavior only; native client/server startup, load ordering and co-enabled safety remain NOT TESTED. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
+
+# Historical dev.4 blockers — unchanged runtime findings
 
 ## Current Nightfall-style alternative — 2026-10-16
 

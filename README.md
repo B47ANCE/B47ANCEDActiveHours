@@ -1,37 +1,33 @@
-Project Version: 0.1.0-dev.4
-
-> **Absorbed by M.O.R.T.I.S.** All future development, including Active Hours policy, lives in [Project MORTIS](https://github.com/B47ANCE/ProjectMORTIS). See [migration and preserved history](docs/ABSORBED_BY_MORTIS.md). The code and Workshop item below describe the historical standalone dev.4 experiment. Runtime gates are unchanged.
+Project Version: 0.1.0-dev.5
 
 # B47ANCE'd Active Hours
 
 ![B47ANCE'd Active Hours project thumbnail](thumbnail.png)
 
-Project artwork: [thumbnail source and provenance](docs/BRANDING.md).
+Active Hours remains a maintained standalone mod. M.O.R.T.I.S. will include its complete feature set as a built-in subsystem. The two implementations are incompatible: **when `ProjectMORTIS` is enabled, Active Hours disables its own execution and MORTIS takes precedence.** Neither mod requires the other for this relationship.
 
-Mod ID: `B47ANCEDActiveHours`
-Target: Project Zomboid Build 42.21
-Status: isolated Lua-only experimental source prepared; production gameplay BLOCKED.
+## Current development state
 
-Workshop MP test item: [B47ANCE'd Active Hours](https://steamcommunity.com/sharedfiles/filedetails/?id=3820693462), version 0.1.0-dev.4. Enable diagnostic B47ANCEDActiveHoursMortisProof with ProjectMORTIS/experienceWorks, following the current MORTIS procedure. Upload/public metadata are verified; dedicated multiplayer remains NOT TESTED and stable release BLOCKED. Source/provenance is in [PR #11](https://github.com/B47ANCE/B47ANCEDActiveHours/pull/11) and docs/publications/0.1.0-dev.4-workshop-3820693462.json.
+The independent source is `src/B47ANCEDActiveHours/`, Mod ID `B47ANCEDActiveHours`. It currently contains a Lua-only compatibility bootstrap, not implemented speed/solar gameplay. It reads activated mod IDs before admitting standalone execution, checks exact `ProjectMORTIS` identity independently of Lua load order, and stays inactive if the list is unavailable, malformed or not ready. It never changes enabled-mod lists, saves, sandbox values or zombie state. Every future gameplay entry point must honor this gate before registering handlers or acting.
 
-Current experiment: [Nightfall-style MORTIS speed test](docs/MORTIS_SPEED_PROOF.md), using server-side public locomotion overrides with read-only clients. Source: proof/B47ANCEDActiveHoursMortisProof/. Dependencies: ProjectMORTIS and experienceWorks. [API evidence and limitations](docs/TEAM_API_RESEARCH.md). The original owner-routed dev.3 proof/runbook below are retained historical experiments, not this variant's install instructions. No new PZ runtime success is claimed.
+[Compatibility contract, evidence and test matrix](docs/MORTIS_COMPATIBILITY.md). The earlier statement that this project was retired/superseded is corrected by the user's clarification. The separate repository, Mod ID, Workshop identity and supplied artwork remain maintained. MORTIS owns its included implementation; this project owns its independent one. Solar progression, Day/Night/Both policy, fixed profiles, weighted ranges and other approved features remain shared development scope; completion/parity is not claimed from design documents.
 
-Active and Inactive now mean custom behavior profiles. Zombies retain native detection, pursuit and attacks. The current handoff forbids native activity access/toggles, Java interception, replacement classes, installed binary changes and sandbox mutation.
+## Historical diagnostic and Workshop content
 
-One future Workshop item contains neutral Core, Night (`B47ANCEDActiveHoursNight`) and Day (`B47ANCEDActiveHoursDay`). Gameplay modules depend on Core and are mutually exclusive. Conflict or vanilla ActiveOnly other than Both disables custom gameplay. Server owns configuration, solar thresholds and profile decisions. Client execution must follow native simulation ownership.
+Workshop item [3820693462](https://steamcommunity.com/sharedfiles/filedetails/?id=3820693462) still contains the dev.4 **MORTIS-dependent diagnostic**, Mod ID `B47ANCEDActiveHoursMortisProof`. That old test payload is not the new standalone source or an automatically updated item. Both old `proof/` trees remain byte-for-byte historical evidence, including the known owner-routed race in the older experiment. Never install/enable them as the standalone mod or alongside current MORTIS diagnostics. No item/upload/subscriber/save migration is performed here.
 
-Current research: [Lua API audit](docs/LUA_ONLY_API_AUDIT.md), [speed feasibility](docs/LUA_SPEED_CONTROL.md), [profile architecture](docs/LUA_PROFILE_ARCHITECTURE.md), [authority](docs/LUA_MULTIPLAYER_AUTHORITY.md), [solar design](docs/SOLAR_TRANSITION_DESIGN.md), [minimal proof](docs/LUA_ONE_ZOMBIE_POC.md), [blockers](docs/RELEASE_BLOCKERS.md), [test plan](docs/TEST_PLAN.md), [configuration](docs/CONFIGURATION_GUIDE.md), [performance](docs/PERFORMANCE_DESIGN.md).
+MORTIS retains its frozen 64-file dev.4 import for research/history. [Relationship correction](docs/ABSORBED_BY_MORTIS.md), [source inventory](SOURCE_INVENTORY.json), [version inventory](docs/VERSION_INVENTORY.md), [blockers](docs/RELEASE_BLOCKERS.md).
 
-Public category methods are source-supported Lua candidates, not runtime-verified gameplay controls. Global Speed readers, derived-state restoration and owner/network ordering remain blockers. The first conditional proof is one standing continuously loaded zombie, fixed speed, dedicated server and two clients. Solar and additional attributes are deferred.
+## Development validation
 
-G2 Lua architecture BLOCKED; Phase B executable Lua speed proof NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Isolated experimental source is now prepared; no PZ runtime execution, game/server launch, deployment, package or release occurred.
+```powershell
+python scripts/check_versions.py --root .
+python scripts/test_check_versions.py
+python scripts/test_standalone_compatibility.py
+```
 
-[Retained validation](docs/VALIDATION.md), attribute call graphs and native ownership evidence remain source research. Native bridge and old native proof designs are explicitly superseded. Local engine extractions/decompilation are inspection artifacts, never distribution assets. External loose-class drift is recorded; actual effective peer behavior is UNKNOWN.
+Repeat the last command with `B47_COMPAT_LUA=54` for Lua 5.4; default is Lua 5.1 via development-only lupa. Original diagnostic tests remain available but test their frozen source, not current gameplay. Offline mocks do not prove Kahlua, startup ordering or dedicated MP compatibility.
 
-Approved initial project version is recorded in root VERSION. See docs/VERSION_POLICY.md and docs/VERSION_INVENTORY.md. Historical game/tool versions are separate. No release artifacts exist; gameplay remains blocked.
+G2 BLOCKED (production); G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. No game/server launch, install, deploy, package or publish is performed by this checkpoint.
 
-Prepared isolated experiment: [installation, operator controls and dedicated matrix](docs/ISOLATED_SPEED_PROOF.md). Source under proof/ uses a distinct diagnostic Mod ID; production Core/Night/Day remain absent. Thirty-six actual-Lua mock tests per Lua 5.1/5.4 engine are offline only. Runtime gates stay unchanged.
-
-Current checkpoint adds readiness fixes; G2 blocks production approval and does not block isolated prototype validation. Follow docs/ISOLATED_SPEED_PROOF.md for human installation and three-peer procedure; no automatic deployment/launch.
-
-Final human preparation: [disposable test runbook](docs/RUNTIME_TEST_RUNBOOK.md) and [blank runtime evidence form](docs/RUNTIME_EVIDENCE_TEMPLATE.md). Prototype code is unchanged by this documentation-only handoff; runtime evidence remains pending.
+GitHub offline workflow `.github/workflows/offline.yml` checks versions and the compatibility suite under Lua 5.1/5.4, plus frozen prototype regressions under Lua 5.1. It reuses the MORTIS reviewed action pins, read-only token permissions and checkout with credentials not persisted; development-only lupa is pinned to 2.6. No install, deploy, package, upload or native runtime execution. Workflow availability is not branch-protection enforcement.
