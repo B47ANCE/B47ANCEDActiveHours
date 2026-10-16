@@ -2,7 +2,7 @@ Project Version: 0.1.0-dev.4
 
 # Repository governance
 
-Workshop identity: WORKSHOP_ID.txt = 3820693462, created under the user's explicit new-item authorization on 2026-10-16. Initial content update failed with Steam Limit exceeded; creation alone is not a successful publication. Current status/provenance is recorded in VALIDATION.md. Never create a replacement item when retrying this identity.
+Workshop identity: WORKSHOP_ID.txt = 3820693462, created under the user's explicit authorization on 2026-10-16. Initial update failed with Steam Limit exceeded; retrying this same identity with the compact preview succeeded. SteamCMD and public metadata/description are verified. Publication provenance: docs/publications/0.1.0-dev.4-workshop-3820693462.json. This is an MP testing upload, not runtime/stable release approval. Never create a replacement item when updating this identity.
 
 Current isolated source: proof/B47ANCEDActiveHoursMortisProof/42/, Mod ID B47ANCEDActiveHoursMortisProof, with common/. Requires ProjectMORTIS/experienceWorks; no dependency implementation is bundled. The original proof and its spec/runbook/form are frozen historical dev.3 artifacts and must not enter the new payload. Production Core/Night/Day remain absent. The assigned Workshop identity above is independent of canonical project SemVer.
 

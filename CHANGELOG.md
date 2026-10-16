@@ -2,6 +2,8 @@
 
 ## [0.1.0-dev.4]
 
+- Distribute the MORTIS diagnostic through new Workshop test item 3820693462 with the selected artwork; dedicated multiplayer NOT TESTED. Record package/source provenance and unchanged runtime gates.
+
 - Add a separate server-side MORTIS speed test using the public locomotion override API used by Nightfall's UV slowing. Require ProjectMORTIS and experienceWorks; preserve the original owner-routed proof at dev.3.
 - Add API negotiation, admin/session/replay checks, read-only clients and bounded native observations. Helper acceptance/release is not native replication or full behavioral restoration proof. Runtime gates unchanged.
 
