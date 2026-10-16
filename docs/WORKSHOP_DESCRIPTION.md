@@ -15,6 +15,10 @@ An isolated one-zombie speed experiment using the same public M.O.R.T.I.S. locom
 ## Compatibility & Requirements
 Target: vanilla Project Zomboid Build 42.21. Required Mod IDs: ProjectMORTIS and experienceWorks. MORTIS API 1.5.0 or later within major version 1, with the required locomotion and authority functions. Project Nightfall itself is not required.
 
+Subscribe to both dependencies before the test:
+- Project M.O.R.T.I.S.: https://steamcommunity.com/sharedfiles/filedetails/?id=3788592827
+- experienceWorks: https://steamcommunity.com/sharedfiles/filedetails/?id=3792566496
+
 Diagnostic Mod ID: B47ANCEDActiveHoursMortisProof. Do not enable the older B47ANCEDActiveHoursSpeedProof, production Core/Night/Day modules, or Nightfall for this isolated test. Actual Build 42.21 loading, Kahlua, SP and dedicated multiplayer behavior are NOT TESTED. Lua mock tests do not establish in-game compatibility.
 
 ## Configuration
