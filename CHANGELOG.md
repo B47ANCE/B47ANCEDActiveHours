@@ -2,6 +2,8 @@
 
 ## [0.1.0-dev.4]
 
+- 2026-10-16 documentation-only consolidation: all future Active Hours development moves into MORTIS. Preserve standalone source/version, test history and published payload; no runtime gate change. See docs/ABSORBED_BY_MORTIS.md.
+
 - Distribute the MORTIS diagnostic through new Workshop test item 3820693462 with the selected artwork; dedicated multiplayer NOT TESTED. Record package/source provenance and unchanged runtime gates.
 
 - Add a separate server-side MORTIS speed test using the public locomotion override API used by Nightfall's UV slowing. Require ProjectMORTIS and experienceWorks; preserve the original owner-routed proof at dev.3.
