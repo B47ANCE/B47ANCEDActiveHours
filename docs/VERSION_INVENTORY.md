@@ -1,6 +1,8 @@
 # Version inventory
 
-Project Version: 0.1.0-dev.3
+At dev.4, runtime mirrors are proof/B47ANCEDActiveHoursMortisProof/42/mod.info and its shared B47AHMortisProof.lua version, plus MORTIS_SPEED_PROOF.md and TEAM_API_RESEARCH.md headers. Original dev.3 proof and ISOLATED_SPEED_PROOF/RUNTIME_TEST_RUNBOOK/RUNTIME_EVIDENCE_TEMPLATE are explicitly historical/unchanged, removed from current mirrors. Older inventory paragraphs below describe their recorded checkpoints, not the selected current payload.
+
+Project Version: 0.1.0-dev.4
 
 Root VERSION is the sole authority; version-inventory.json declares exact mirrors and selectors. Current mirrors must exist and contain one matching Project Version header:
 

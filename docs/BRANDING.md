@@ -1,6 +1,8 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # Active Hours project thumbnail
+
+Workshop delivery export (2026-10-16): assets/branding/ActiveHoursWorkshopPreview.jpg is a 1254x1254 JPEG encoding of the selected artwork, 199,723 bytes, SHA-256 02aeaab02b03a929eb60dc37080744f0d482032e052548a9926039eae2fba57d. Composition/dimensions are unchanged; the original PNG/root thumbnail remain byte-for-byte intact. The initial Steam update returned Limit exceeded with the larger PNG; the delivery export is for that retry, not a replacement of authoring artwork.
 
 Selected by the user on 2026-10-15: the custom Active Hours clock/zombie artwork. Authoritative source: `assets/branding/ActiveHoursThumbnail.png`. Project thumbnail: root `thumbnail.png`, mirrored byte-for-byte and shown in README. Both are the supplied 1254x1254 PNG (1,538,317 bytes), without cropping, resizing or regeneration.
 

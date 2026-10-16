@@ -1,6 +1,8 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # Minimal Lua-only one-zombie proof design
+
+Current user-selected alternative is MORTIS_SPEED_PROOF.md: one continuously loaded zombie, server-side Nightfall-style tier override/release, read-only clients and actual motion/overwrite/release measurements. The original owner-routed source/procedure remain frozen at dev.3. No production solar/profile systems, faithful restoration claim or runtime gate advancement.
 
 Design only; no executable prototype. Versioned research. G2 BLOCKED; Phase B executable Lua speed proof NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. This document does not authorize game/server launch or deployment.
 

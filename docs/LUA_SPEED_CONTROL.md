@@ -1,6 +1,10 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # Lua speed control feasibility
+
+## Current Nightfall/MORTIS experiment — 2026-10-16
+
+User selected the team-owned Nightfall UV slow mechanism: MORTIS LocomotionOverrides.acquire/release calls native tier helpers on the server. New source/procedure: MORTIS_SPEED_PROOF.md; API/provenance: TEAM_API_RESEARCH.md. This differs from the original narrow-setter experiment retained below. Helpers reroll derived values and release restores only walk/category, so full restoration remains open. No Java, native activity refresh, sandbox mutation or continuous override. Movement, overwrite and observer outcomes remain NOT TESTED; G2/G6/G7/G8 unchanged.
 
 Status: [VERIFIED source-supported candidates], [UNKNOWN runtime safety], [BLOCKED gameplay adapter]. References are retained `research/jar-source/` lines; no speed call has run in PZ.
 

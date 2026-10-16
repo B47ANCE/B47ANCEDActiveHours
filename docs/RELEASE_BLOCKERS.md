@@ -1,6 +1,12 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # Current Lua-only blockers — controlling status
+
+## Current Nightfall-style alternative — 2026-10-16
+
+User selected Nightfall's UV slow mechanism. New B47ANCEDActiveHoursMortisProof uses MORTIS's canonical server API, with no client Apply/acknowledgment/native setter. Original owner-routed dev.3 proof and race evidence remain frozen, excluded from the new payload. See TEAM_API_RESEARCH.md and MORTIS_SPEED_PROOF.md.
+
+Intent/permission boundaries are server-owned and fail closed. This does not prove that native owners preserve/replicate server helper results. Release restores walk/category, not original scalar/all helper state. Build 42.21 loading, actual motion, observer behavior, overwrites, transfer and behavioral restoration remain NOT TESTED. G2 BLOCKED (production), G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. No gate or historical evidence is advanced. Distribution still requires upload preflight and does not imply runtime PASS.
 
 The latest Lua-only handoff supersedes the native implementation requirements below. Historical evidence is preserved; Java loader and transform prerequisites no longer apply to the current proof.
 

@@ -1,4 +1,40 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
+
+## Nightfall/MORTIS alternative — 2026-10-16
+
+### Verified Workshop test distribution
+
+Same-item retry succeeded: SteamCMD exit 0 with native Committing update...Success. for 3820693462. The earlier success parser expected the new-item phrase Published File Id; reviewing the native commit-success result, exit code and exact VDF identity corrected the verification record without another upload. Public Steam API returned result 1, App ID 108600, public visibility, title B47ANCE'd Active Hours, nonempty 55,670-byte content and the exact complete canonical test description. The public page was unavailable to the web reader; public metadata/description verification succeeded independently through Steam's read-only API. Subscription/download and actual game/server execution remain NOT TESTED.
+
+Uploaded payload source: eda9c865a39d9c8c3f8a784108957a96056b629c on feature/mortis-speed-proof, version 0.1.0-dev.4. Seven-file package SHA-256 remains 80579f3f44325e1d09c937b02bb0aaceb8af64ace6dc2ba62e6dc8cf2abcc89e. JPEG preview SHA-256 02aeaab02b03a929eb60dc37080744f0d482032e052548a9926039eae2fba57d; original project PNG unchanged. The old source/staging and failed-attempt evidence were preserved. Complete sanitized publication provenance is docs/publications/0.1.0-dev.4-workshop-3820693462.json; raw Steam authentication/output logs remain private, not committed.
+
+After verified success, the running Steam desktop executable was discovered at E:/program files (x86)/steam/steam.exe, gracefully stopped and restarted from that same path with a hidden launch window; client process restart verified. No forced process termination, game/server launch, local mod installation, player-save or remote-server modification. Steam restart is not download or MP evidence. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; stable-release G8 BLOCKED unchanged.
+
+Distribution preflight: source commit 848d49cd8142c080fd7ca7397794bb00c2a5734a pushed/verified in PR #11; deterministic seven-file ZIP SHA-256 80579f3f44325e1d09c937b02bb0aaceb8af64ace6dc2ba62e6dc8cf2abcc89e. Generated with python scripts/build_mortis_test_package.py --output dist/current; scripts/check_versions.py --root . --release PASS for filename/embedded version checks only; ZIP CRC, exact member inventory, case collisions, traversal and source/stage hashes PASS. The canonical Workshop description renderer and --check PASS. No old proof/dependency source or Java enters the payload.
+
+The user-authorized new Steam item was assigned 3820693462. First SteamCMD update returned exit 9 / Limit exceeded, not success. No Steam restart occurred after failure. Raw uploader output remains private outside the repository. A VDF UTF-8 handling error had already been corrected before SteamCMD was first invoked; the failed attempt and item identity are preserved for retry, not discarded or recreated. New Workshop-only JPEG delivery export validates at 1254x1254/199,723 bytes with original PNG unchanged. Retry/public verification outcome remains pending until explicitly recorded below.
+
+User requested Nightfall's UV slow mechanism while new Workshop item creation remains authorized. Read-only inspection identified team-owned Nightfall 0.27.3 -> MORTIS 0.23.2/API 1.5.0 -> canonical server overrides. TEAM_API_RESEARCH.md records references/fingerprints/limits. No dependency implementation/assets were copied or changed. New source: proof/B47ANCEDActiveHoursMortisProof/. Original dev.3 proof and original spec/runbook/form are byte-for-byte unchanged and historical. Dependencies: ProjectMORTIS/experienceWorks; no Java/runtime Python.
+
+[TESTED offline] Fourteen new consumer tests PASS per Lua 5.1/5.4 engine via existing lupa; nine version tests PASS, including historical preservation; original 36-test suite PASS on preserved dev.3 code under Lua 5.1. Prior original Lua 5.4 results remain historical. Existing MORTIS test_locomotion_overrides.lua and test_locomotion_adapter_numbers.lua ran directly/read-only under both engines with their native mocks: all four script executions PASS. None is Kahlua/native movement/replication proof.
+
+Exact repository commands (the bundled Python executable recorded below was used):
+
+```powershell
+python scripts/check_versions.py --root .
+python scripts/test_check_versions.py
+python scripts/test_mortis_speed_proof.py
+$env:B47_PROOF_LUA='54'
+python scripts/test_mortis_speed_proof.py
+Remove-Item Env:\B47_PROOF_LUA
+python scripts/test_speed_proof.py
+git diff --exit-code -- proof/B47ANCEDActiveHoursSpeedProof docs/ISOLATED_SPEED_PROOF.md docs/RUNTIME_TEST_RUNBOOK.md docs/RUNTIME_EVIDENCE_TEMPLATE.md
+git diff --check
+```
+
+Current headers/runtime mirrors use dev.4; frozen proof/instructions deliberately retain dev.3. Only server calls MORTIS acquire/release; clients have no native setter or Apply handler. No whole-engine nonwrite claim. Release does not provide original scalar/full-state restoration. Native overwrite, effective owner behavior, observer motion and actual restored behavior remain NOT TESTED. G2 production BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED.
+
+Publication inputs: docs/WORKSHOP_DESCRIPTION.md and docs/WORKSHOP_CHANGELOG.md, labeled MP testing build - dedicated multiplayer NOT TESTED. Packaging writes only a fresh ignored dist directory, verifies explicit source inventory/ZIP integrity/hashes and records source commit; it never deletes, uploads, installs or launches. Package/upload results must be recorded after execution; no Workshop ID or upload success is invented here. Fallback icon/poster are exact byte copies; selected thumbnail unchanged.
 
 ## Versioning initialization — 2026-10-08
 

@@ -63,27 +63,31 @@
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
     {
-      "path": "docs/ISOLATED_SPEED_PROOF.md",
+      "path": "docs/BRANDING.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
     {
-      "path": "proof/B47ANCEDActiveHoursSpeedProof/42/mod.info",
+      "path": "proof/B47ANCEDActiveHoursMortisProof/42/mod.info",
       "pattern": "^modversion=(?P<version>\\S+)$"
     },
     {
-      "path": "proof/B47ANCEDActiveHoursSpeedProof/42/media/lua/shared/B47AHProof.lua",
-      "pattern": "^P.Version = \"(?P<version>[^\\\"]+)\"$"
+      "path": "proof/B47ANCEDActiveHoursMortisProof/42/media/lua/shared/B47AHMortisProof.lua",
+      "pattern": "^P.Version = \"(?P<version>[^\"]+)\"$"
     },
     {
-      "path": "docs/RUNTIME_TEST_RUNBOOK.md",
+      "path": "docs/MORTIS_SPEED_PROOF.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
     {
-      "path": "docs/RUNTIME_EVIDENCE_TEMPLATE.md",
+      "path": "docs/TEAM_API_RESEARCH.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
     {
-      "path": "docs/BRANDING.md",
+      "path": "docs/WORKSHOP_DESCRIPTION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/WORKSHOP_CHANGELOG.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
@@ -95,7 +99,17 @@
     "artifacts": [
       {
         "glob": "dist/current/*.zip",
-        "pattern": "B47ANCEDActiveHours-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?)\\.zip"
+        "pattern": "B47ANCEDActiveHours-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?)\\.zip",
+        "zip_members": [
+          {
+            "member": "mods/B47ANCEDActiveHoursMortisProof/42/mod.info",
+            "pattern": "^modversion=(?P<version>\\S+)$"
+          },
+          {
+            "member": "mods/B47ANCEDActiveHoursMortisProof/42/media/lua/shared/B47AHMortisProof.lua",
+            "pattern": "^P.Version = \"(?P<version>[^\"]+)\"$"
+          }
+        ]
       }
     ]
   },
@@ -119,6 +133,11 @@
       "category": "inventory-schema",
       "reference": "version-inventory.json: schema",
       "reason": "Inventory format only"
+    },
+    {
+      "category": "dependency",
+      "reference": "ProjectNightfall 0.27.3; ProjectMORTIS 0.23.2, API 1.5.0",
+      "reason": "Inspected team framework versions; independent of Active Hours project version"
     }
   ],
   "historical": [
@@ -181,6 +200,18 @@
     {
       "reference": "docs/RELEASE_BLOCKERS.md and docs/TEST_PLAN.md historical sections",
       "reason": "Preserved prior requirements/status narrative; current header controls version only"
+    },
+    {
+      "reference": "proof/B47ANCEDActiveHoursSpeedProof/**",
+      "reason": "Original owner-routed diagnostic frozen byte-for-byte at 0.1.0-dev.3; its known stale-owner race remains historical evidence, not the new MORTIS backend"
+    },
+    {
+      "reference": "docs/ISOLATED_SPEED_PROOF.md, docs/RUNTIME_TEST_RUNBOOK.md, docs/RUNTIME_EVIDENCE_TEMPLATE.md",
+      "reason": "Frozen dev.3 owner-routed experiment instructions/evidence template; current MORTIS experiment is docs/MORTIS_SPEED_PROOF.md"
+    },
+    {
+      "reference": "docs/publications/**",
+      "reason": "Immutable Workshop distribution provenance retains actual published project version, source commit, item ID and hashes; not new runtime evidence"
     }
   ]
 }

@@ -1,6 +1,10 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # Lua multiplayer authority feasibility
+
+## Current MORTIS variant — 2026-10-16
+
+The new variant follows Nightfall's canonical server API: admin intent is validated on server, which alone calls MORTIS acquire/release; clients sample only. No owner-targeted Apply, client native write or acknowledgment. Original dev.3 delayed-revocation evidence remains valid for that preserved protocol. The MORTIS override table is ephemeral and is not itself in component snapshots; native owners may overwrite server helper results. See TEAM_API_RESEARCH.md and MORTIS_SPEED_PROOF.md. Production authority/replication G2 remains BLOCKED; dedicated behavior NOT TESTED.
 
 All references below are retained CFR files under `research/jar-source/`. [VERIFIED source] means source inspection only. Full native ordering evidence remains in NATIVE_OWNERSHIP_ORDERING.md and MULTIPLAYER_AUTHORITY.md; their interception proposals are superseded.
 

@@ -1,6 +1,8 @@
-Project Version: 0.1.0-dev.3
+Project Version: 0.1.0-dev.4
 
 # Current Lua-only validation plan
+
+Current MORTIS variant: scripts/test_mortis_speed_proof.py under development lupa Lua 5.1/5.4 (B47_PROOF_LUA=54). Fourteen tests per engine cover server-only API routing, client nonwrites, limited release, admin/operator/session/replay checks, absent/incompatible API, authority/error stops, transfer, ignored observer Apply, no overwrite repair, bounded rings and event deduplication. The 36 original tests still exercise frozen dev.3 source, not this backend. Both suites are offline only. Current human procedure/evidence: MORTIS_SPEED_PROOF.md. The original runbook remains historical, not the new install target.
 
 LUA_ONE_ZOMBIE_POC.md replaces the loader/native-toggle experiment described historically below. First validate fixed speed through normal Lua on one continuously loaded zombie, dedicated server and two clients: owner-only application, native observer replication, true movement/animation, reverse transition, restoration, all relevant global Speed settings, native stats resets and authority handoff. Record exact effective peer provenance and sequence timestamps. No solar or extra attributes in the first proof.
 
