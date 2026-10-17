@@ -1,0 +1,31 @@
+{
+  "steam_build": "25485521",
+  "target_game_version": "42.21",
+  "executed_full_game_version": "UNKNOWN",
+  "runtime_status": "NOT TESTED",
+  "client_source_status": "VERIFIED observed vanilla call",
+  "server_source_status": "INFERRED shared global route; dedicated startup availability/timing UNKNOWN",
+  "api": "getActivatedMods(); list:size(); list:get(zeroBasedIndex)",
+  "negative_api": "isModActive accepts a ChooseGameInfo.Mod object in inspected native source; no string-overload assumption is used.",
+  "evidence": [
+    {
+      "path": "media/lua/client/ISUI/ISPauseModListUI.lua",
+      "sha256": "05f83001e8f975c5ee3ea0823ae40384387eceea6d668cda5bbedf22ad72a62c",
+      "lines": [
+        19,
+        21
+      ],
+      "claim": "Vanilla client uses getActivatedMods(), list:size(), list:get(zeroBasedIndex)."
+    },
+    {
+      "path": "projectzomboid.jar",
+      "sha256": "e1a69eb743ede60b213a0fe7f8b83d4fcab773036d256cc4543a336f3b058a33",
+      "lines": [
+        1,
+        1
+      ],
+      "claim": "Read-only native metadata/library trace: GlobalObject.getActivatedMods returns ZomboidFileSystem.getModIDs; method is annotated global. No actual Lua/server invocation certified."
+    }
+  ],
+  "research_reference": "Original local research/jar-source/zombie/Lua/LuaManager$GlobalObject.java:3991-3993; annotations/signature/body inspected read-only, not redistributed. Native bytecode provenance is the jar fingerprint above."
+}

@@ -1,0 +1,8 @@
+name=B47ANCE'd Active Hours
+id=B47ANCEDActiveHours
+author=B47ANCE
+modversion=0.1.0-dev.5
+versionMin=42.21
+icon=icon.png
+poster=poster.png
+description=Development compatibility bootstrap only; speed/solar gameplay is not implemented. Active Hours disables its execution when ProjectMORTIS is enabled. Native runtime and dedicated multiplayer NOT TESTED.

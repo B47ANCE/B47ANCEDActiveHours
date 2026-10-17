@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.4
+Project Version: 0.1.0-dev.5
 
 # Active Hours project thumbnail
 
@@ -27,3 +27,5 @@ User-provided art on 2026-10-14. SHA-256 small: 60e2a193a6c1e1190941e6c342ec23c6
 This is asset-only work. Current version headers/mirrors identify this authoring iteration; all prior gameplay/API/runtime evidence remains historical at 0.1.0-dev.1 and its original source commits. No prior PASS is promoted to current evidence. No new game/dedicated tests, packages, deployment or publication. Projects without production mod.info retain these as authoring assets, not a fabricated runtime package.
 
 Workshop thumbnail correction: B47_THUMBNAIL.png is a direct 512x512 resize of the user-supplied B47.png. Its SHA-256 is f775bff1783d59af91f331652740d5279fd5603f66d431c6349f38cbd2d9915b. Preserve custom thumbnails; the mod icon remains 64x64 and poster remains 128x128.
+
+The independent dev.5 source copies exact B47_ICON_SMALL.png to src/B47ANCEDActiveHours/42/icon.png and B47_ICON.png to poster.png. The manually supplied thumbnail.png is copied byte-for-byte to src/B47ANCEDActiveHours/thumbnail.png and remains the preferred project/Workshop artwork. No redraw, resize, regeneration or change to originals; offline compatibility metadata tests assert all three copies match their authoring bytes. This authoring layout is not a package, install or upload.

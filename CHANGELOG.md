@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0-dev.5]
+
+- Correct the product relationship: Active Hours remains maintained standalone; MORTIS includes the same feature scope. Active Hours disables its own execution whenever ProjectMORTIS is enabled. No retirement or mutual dependency.
+- Add an independent Lua compatibility bootstrap using the activated-mod list, with MORTIS precedence, no load-order dependency and fail-closed unknown detection. No zombie writers or gameplay controller are introduced.
+- Preserve both diagnostic trees and the published dev.4 payload as historical evidence. Update version/source inventories and regression coverage; runtime gates unchanged.
+- Fix historical-document preservation tests for exact Git LF/recorded Windows CRLF conversion without changing baseline hashes or accepting content/native-evidence changes.
+
 ## [0.1.0-dev.4]
 
 - 2026-10-16 documentation-only consolidation: all future Active Hours development moves into MORTIS. Preserve standalone source/version, test history and published payload; no runtime gate change. See docs/ABSORBED_BY_MORTIS.md.

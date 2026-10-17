@@ -11,6 +11,18 @@ ROOT = Path(__file__).resolve().parents[1]
 CHECKER = ROOT / 'scripts/check_versions.py'
 
 
+def preserved_hash_matches(name, data, expected):
+    if hashlib.sha256(data).hexdigest() == expected:
+        return True
+    # The original audit hashed Windows CRLF docs before Git's declared LF
+    # checkout conversion. Reconstruct those exact bytes; do not change the
+    # recorded baseline or normalize proprietary/native evidence.
+    if name.startswith('docs/') and name.endswith('.md'):
+        recorded = data.replace(b'\r\n', b'\n').replace(b'\n', b'\r\n')
+        return hashlib.sha256(recorded).hexdigest() == expected
+    return False
+
+
 class VersionChecks(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
@@ -65,6 +77,14 @@ class VersionChecks(unittest.TestCase):
     def test_release_requires_artifact(self):
         self.check(1, '--release')
 
+    def test_preservation_handles_only_exact_document_line_ending_conversion(self):
+        original = b'original\r\nrecord\r\n'
+        expected = hashlib.sha256(original).hexdigest()
+        self.assertTrue(preserved_hash_matches('docs/audit.md', original, expected))
+        self.assertTrue(preserved_hash_matches('docs/audit.md', b'original\nrecord\n', expected))
+        self.assertFalse(preserved_hash_matches('docs/audit.md', b'changed\nrecord\n', expected))
+        self.assertFalse(preserved_hash_matches('research/native.class', b'original\nrecord\n', expected))
+
     def test_preserved_research_and_historical_documents(self):
         baseline = json.loads((ROOT / 'scripts/versioning-preservation-baseline.json').read_text())
         if not (ROOT / 'research').exists():
@@ -73,7 +93,7 @@ class VersionChecks(unittest.TestCase):
             if name.startswith('research/') and not (ROOT / 'research').exists():
                 continue  # Local proprietary evidence is deliberately excluded from GitHub.
             with self.subTest(path=name):
-                self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), expected)
+                self.assertTrue(preserved_hash_matches(name, (ROOT / name).read_bytes(), expected), name)
 
 
 if __name__ == '__main__':

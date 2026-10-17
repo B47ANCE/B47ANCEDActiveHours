@@ -1,0 +1,23 @@
+{
+  "WORKSHOP_ID.txt": "bed6645fce33a5a35e16bbc1a143b1afbc4b4e3dd033509b6199214110517c33",
+  "assets/branding/ActiveHoursThumbnail.png": "04cc30dd9d6a0bb5ecb404853df9756aff6f8c344b2ef3d7775ab83c6fba7849",
+  "assets/branding/ActiveHoursWorkshopPreview.jpg": "02aeaab02b03a929eb60dc37080744f0d482032e052548a9926039eae2fba57d",
+  "assets/branding/B47_ICON.png": "0e30a776c77dbf66eeb9acfa7596c7f850cb5b334e8873ef94acbb3b071582c3",
+  "assets/branding/B47_ICON_SMALL.png": "60e2a193a6c1e1190941e6c342ec23c673a561dbed895c80067fe2b89c7f7e83",
+  "assets/branding/B47_THUMBNAIL.png": "f775bff1783d59af91f331652740d5279fd5603f66d431c6349f38cbd2d9915b",
+  "docs/MORTIS_SPEED_PROOF.md": "2ca81360370781322b029b95f8ab274831469c97eadc42485683ddc3d066ad5b",
+  "docs/publications/0.1.0-dev.4-workshop-3820693462.json": "064924dbbc7385c4caecb1ded848fbb84663db85ee4fd688133b8cf46aefdb1b",
+  "proof/B47ANCEDActiveHoursMortisProof/42/icon.png": "60e2a193a6c1e1190941e6c342ec23c673a561dbed895c80067fe2b89c7f7e83",
+  "proof/B47ANCEDActiveHoursMortisProof/42/media/lua/client/B47AHMortisProofClient.lua": "5cd840e47163cdfa43301cd9288f6ad62ed5df77b5973d1413baa96f451c364f",
+  "proof/B47ANCEDActiveHoursMortisProof/42/media/lua/server/B47AHMortisProofServer.lua": "d1af62089c6b571c9df16f9abe72749a79b7a849a85ffa5466ea3d70f1da9de8",
+  "proof/B47ANCEDActiveHoursMortisProof/42/media/lua/shared/B47AHMortisProof.lua": "37735be9d006c9ada0aa2ec1af1eb6be967412804c223ede88b96a39daccb3a4",
+  "proof/B47ANCEDActiveHoursMortisProof/42/mod.info": "b98e958109d10ca814d4eb135f3f7c9a2c2a4d0ca5dc97a374b909fc744ee93f",
+  "proof/B47ANCEDActiveHoursMortisProof/42/poster.png": "0e30a776c77dbf66eeb9acfa7596c7f850cb5b334e8873ef94acbb3b071582c3",
+  "proof/B47ANCEDActiveHoursMortisProof/common/.keep": "65bad3b0db20d361f836cabd7f38e5dc993445a896e6d2ddec849297d4c79cc5",
+  "proof/B47ANCEDActiveHoursSpeedProof/42/media/lua/client/B47AHProofClient.lua": "50823a3f2127516fd3cf3ec0e49bb0918e72fb8b7934cc62eb92b71c18f462b8",
+  "proof/B47ANCEDActiveHoursSpeedProof/42/media/lua/server/B47AHProofServer.lua": "82b6f171637dd49c5f29bd10d080adf53ea3f06686dac6a26b42b9901376dece",
+  "proof/B47ANCEDActiveHoursSpeedProof/42/media/lua/shared/B47AHProof.lua": "b9374245d44a805cec8277187ccb42928a1f418745b903757463ad603579065c",
+  "proof/B47ANCEDActiveHoursSpeedProof/42/mod.info": "de84433f3483a2941ed81363040d839e7a1f61dc85f56daf3df156d48d4bb34f",
+  "proof/B47ANCEDActiveHoursSpeedProof/common/.keep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "thumbnail.png": "04cc30dd9d6a0bb5ecb404853df9756aff6f8c344b2ef3d7775ab83c6fba7849"
+}

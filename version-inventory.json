@@ -67,18 +67,6 @@
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
     {
-      "path": "proof/B47ANCEDActiveHoursMortisProof/42/mod.info",
-      "pattern": "^modversion=(?P<version>\\S+)$"
-    },
-    {
-      "path": "proof/B47ANCEDActiveHoursMortisProof/42/media/lua/shared/B47AHMortisProof.lua",
-      "pattern": "^P.Version = \"(?P<version>[^\"]+)\"$"
-    },
-    {
-      "path": "docs/MORTIS_SPEED_PROOF.md",
-      "pattern": "^Project Version: (?P<version>\\S+)$"
-    },
-    {
       "path": "docs/TEAM_API_RESEARCH.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
@@ -89,6 +77,18 @@
     {
       "path": "docs/WORKSHOP_CHANGELOG.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "src/B47ANCEDActiveHours/42/mod.info",
+      "pattern": "^modversion=(?P<version>\\S+)$"
+    },
+    {
+      "path": "src/B47ANCEDActiveHours/42/media/lua/shared/B47ANCEDActiveHours.lua",
+      "pattern": "^AH.Version = \"(?P<version>[^\"]+)\"$"
+    },
+    {
+      "path": "docs/MORTIS_COMPATIBILITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -98,16 +98,16 @@
   "packaging": {
     "artifacts": [
       {
-        "glob": "dist/current/*.zip",
+        "glob": "dist/standalone-current/*.zip",
         "pattern": "B47ANCEDActiveHours-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?)\\.zip",
         "zip_members": [
           {
-            "member": "mods/B47ANCEDActiveHoursMortisProof/42/mod.info",
+            "member": "mods/B47ANCEDActiveHours/42/mod.info",
             "pattern": "^modversion=(?P<version>\\S+)$"
           },
           {
-            "member": "mods/B47ANCEDActiveHoursMortisProof/42/media/lua/shared/B47AHMortisProof.lua",
-            "pattern": "^P.Version = \"(?P<version>[^\"]+)\"$"
+            "member": "mods/B47ANCEDActiveHours/42/media/lua/shared/B47ANCEDActiveHours.lua",
+            "pattern": "^AH.Version = \"(?P<version>[^\"]+)\"$"
           }
         ]
       }
@@ -212,6 +212,14 @@
     {
       "reference": "docs/publications/**",
       "reason": "Immutable Workshop distribution provenance retains actual published project version, source commit, item ID and hashes; not new runtime evidence"
+    },
+    {
+      "reference": "proof/B47ANCEDActiveHoursMortisProof/** and docs/MORTIS_SPEED_PROOF.md",
+      "reason": "Frozen dev.4 MORTIS-dependent experiment and original instructions. Never the independent standalone package or current version mirrors."
+    },
+    {
+      "reference": "dist/current/** and dist/preview-retry/**",
+      "reason": "Preserved dev.4 distribution artifacts; source/publication provenance remains unchanged. No deletion or relabeling."
     }
   ]
 }

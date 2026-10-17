@@ -1,0 +1,37 @@
+{
+  "canonical_version_file": "VERSION",
+  "authoritative_source_roots": [
+    "src/B47ANCEDActiveHours/42"
+  ],
+  "mod_ids": [
+    "B47ANCEDActiveHours"
+  ],
+  "workshop_ids": [
+    "3820693462"
+  ],
+  "runtime_dependencies": [],
+  "status": "Compatibility bootstrap only; no implemented speed/solar production gameplay",
+  "historical_records": [
+    "proof/B47ANCEDActiveHoursSpeedProof/",
+    "proof/B47ANCEDActiveHoursMortisProof/",
+    "docs/MORTIS_SPEED_PROOF.md",
+    "docs/publications/",
+    "research/ (ignored, retained only in original checkout)",
+    "dist/current/",
+    "dist/preview-retry/"
+  ],
+  "generated_outputs": [
+    "dist/standalone-current/ (absent; no package built)"
+  ],
+  "authoring_assets": [
+    "thumbnail.png",
+    "assets/branding/",
+    "src/B47ANCEDActiveHours/thumbnail.png"
+  ],
+  "validation": [
+    "python scripts/check_versions.py --root .",
+    "python scripts/test_check_versions.py",
+    "python scripts/test_standalone_compatibility.py"
+  ],
+  "notes": "The assigned Workshop item still contains the historical dev.4 MORTIS-dependent diagnostic. This new independent source is not installed, packaged or published. Never include frozen proof trees in a standalone package; MORTIS dependency is absent from the new source."
+}

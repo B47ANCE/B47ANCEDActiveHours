@@ -1,21 +1,13 @@
-Project Version: 0.1.0-dev.4
+Project Version: 0.1.0-dev.5
 
 # Repository governance
 
-Workshop identity: WORKSHOP_ID.txt = 3820693462, created under the user's explicit authorization on 2026-10-16. Initial update failed with Steam Limit exceeded; retrying this same identity with the compact preview succeeded. SteamCMD and public metadata/description are verified. Publication provenance: docs/publications/0.1.0-dev.4-workshop-3820693462.json. This is an MP testing upload, not runtime/stable release approval. Never create a replacement item when updating this identity.
+Active maintained public project: https://github.com/B47ANCE/B47ANCEDActiveHours. Canonical root VERSION, independent Mod ID B47ANCEDActiveHours, authoritative runtime root src/B47ANCEDActiveHours/42 with common/ sibling. SOURCE_INVENTORY.json classifies source/assets/history. This checkpoint supplies compatibility bootstrap only, not speed/solar gameplay. No MORTIS dependency exists in the new metadata.
 
-Current isolated source: proof/B47ANCEDActiveHoursMortisProof/42/, Mod ID B47ANCEDActiveHoursMortisProof, with common/. Requires ProjectMORTIS/experienceWorks; no dependency implementation is bundled. The original proof and its spec/runbook/form are frozen historical dev.3 artifacts and must not enter the new payload. Production Core/Night/Day remain absent. The assigned Workshop identity above is independent of canonical project SemVer.
+Mandatory compatibility: when ProjectMORTIS is enabled, standalone Active Hours execution is disabled; MORTIS includes all its features. See MORTIS_COMPATIBILITY.md. No external mod or installed file is changed. Both project identities remain active; no retirement, automatic configuration/save migration or UI mod-list rewrite is performed.
 
-Canonical project version: root VERSION. This is documentation-only research at the canonical development version; onboarding does not change gameplay compatibility or justify a version bump.
+Workshop item WORKSHOP_ID.txt = 3820693462 remains the actual previously published dev.4 MORTIS-dependent test. Immutable provenance is docs/publications/0.1.0-dev.4-workshop-3820693462.json. Both proof/ trees and their current-source claims in dated documents are historical. They are excluded from new independent packaging; no package is created by this milestone. Historical dist/current and dist/preview-retry are retained unchanged in the original checkout.
 
-Public repository: https://github.com/B47ANCE/B47ANCEDActiveHours
+Original ignored research/ (game extractions/decompilation/native snapshots) remains local, unchanged and excluded from public Git. Public research references need independently obtained local evidence; source hashes are not substitutes. The MORTIS frozen 64-file import records actual history, not ownership retirement or current runtime proof. No custom Java is supplied.
 
-Authoritative current surfaces: README.md, docs/, VERSION, version-inventory.json, CHANGELOG.md and development scripts/. Isolated experimental runtime source and mod.info now exist under proof/B47ANCEDActiveHoursSpeedProof; production modules have no runtime source or metadata. Planned Mod IDs are B47ANCEDActiveHours, B47ANCEDActiveHoursNight and B47ANCEDActiveHoursDay; no Workshop ID is assigned. No package, staging or installed mod is authoritative here.
-
-Local research/ contains engine extractions, decompilation and provenance used by the audits. It remains ignored and unchanged, and is not distributed through GitHub. Source references in the public documents require access to the independently obtained local evidence. Hashes alone do not reconstruct that evidence. No game code or custom Java component is shipped.
-
-Validation: `python scripts/check_versions.py --root .` and `python scripts/test_check_versions.py`. The preservation test checks local research where available; a public checkout can validate preserved historical documents without engine evidence. Missing local evidence is reported, never considered source/runtime proof. Packaging remains deferred and --release fails without required artifacts.
-
-Initial main is the imported research baseline. Further work uses named feature branches and PRs. No stable tag or automatic deployment/publication. G2 BLOCKED; Phase B NOT STARTED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Public GitHub backup is not dedicated multiplayer validation. CI and branch protection have not been configured by this onboarding.
-
-Authoritative isolated runtime source root: proof/B47ANCEDActiveHoursSpeedProof/42/. Diagnostic Mod ID B47ANCEDActiveHoursSpeedProof, no Workshop ID. Added development command: python scripts/test_speed_proof.py (lupa required only offline). No generated outputs, archives or install tree were created.
+Feature branches/PRs, public staged secret/artifact review, version checks and accurate validation records are required. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. No automatic packaging, install, game/server launch, deploy or publish.
