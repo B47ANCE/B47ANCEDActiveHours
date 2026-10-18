@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.5
+Project Version: 0.1.0-dev.6
 
 # B47ANCE'd Active Hours
 
@@ -12,9 +12,11 @@ The independent source is `src/B47ANCEDActiveHours/`, Mod ID `B47ANCEDActiveHour
 
 [Compatibility contract, evidence and test matrix](docs/MORTIS_COMPATIBILITY.md). The earlier statement that this project was retired/superseded is corrected by the user's clarification. The separate repository, Mod ID, Workshop identity and supplied artwork remain maintained. MORTIS owns its included implementation; this project owns its independent one. Solar progression, Day/Night/Both policy, fixed profiles, weighted ranges and other approved features remain shared development scope; completion/parity is not claimed from design documents.
 
-## Historical diagnostic and Workshop content
+## Workshop test distribution and historical content
 
-Workshop item [3820693462](https://steamcommunity.com/sharedfiles/filedetails/?id=3820693462) still contains the dev.4 **MORTIS-dependent diagnostic**, Mod ID `B47ANCEDActiveHoursMortisProof`. That old test payload is not the new standalone source or an automatically updated item. Both old `proof/` trees remain byte-for-byte historical evidence, including the known owner-routed race in the older experiment. Never install/enable them as the standalone mod or alongside current MORTIS diagnostics. No item/upload/subscriber/save migration is performed here.
+Workshop item [3820693462](https://steamcommunity.com/sharedfiles/filedetails/?id=3820693462) is selected for the authorized 0.1.0-dev.6 compatibility-only test update. Its prior dev.4 payload was the MORTIS-dependent diagnostic, Mod ID B47ANCEDActiveHoursMortisProof. The new independent Core ID is B47ANCEDActiveHours; operators must select it explicitly in disposable test mod lists and disable either old proof. No automated save/server/subscriber migration occurs. Publication success is recorded only in the versioned receipt after verification.
+
+The mod icon is the user-approved transparent clock-only PNG. The original text-and-clock/zombie thumbnail and Workshop preview remain byte-for-byte unchanged. Both old proof/ trees are preserved historical evidence and excluded from the new package.
 
 MORTIS retains its frozen 64-file dev.4 import for research/history. [Relationship correction](docs/ABSORBED_BY_MORTIS.md), [source inventory](SOURCE_INVENTORY.json), [version inventory](docs/VERSION_INVENTORY.md), [blockers](docs/RELEASE_BLOCKERS.md).
 
@@ -28,6 +30,8 @@ python scripts/test_standalone_compatibility.py
 
 Repeat the last command with `B47_COMPAT_LUA=54` for Lua 5.4; default is Lua 5.1 via development-only lupa. Original diagnostic tests remain available but test their frozen source, not current gameplay. Offline mocks do not prove Kahlua, startup ordering or dedicated MP compatibility.
 
-G2 BLOCKED (production); G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. No game/server launch, install, deploy, package or publish is performed by this checkpoint.
+G2 BLOCKED (production); G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. The user authorized packaging and existing-item Workshop MP test distribution after checks; no local install, game/server launch or deployment. Steam restart requires a separate post-upload confirmation.
 
 GitHub offline workflow `.github/workflows/offline.yml` checks versions and the compatibility suite under Lua 5.1/5.4, plus frozen prototype regressions under Lua 5.1. It reuses the MORTIS reviewed action pins, read-only token permissions and checkout with credentials not persisted; development-only lupa is pinned to 2.6. No install, deploy, package, upload or native runtime execution. Workflow availability is not branch-protection enforcement.
+
+Standalone packaging: `python scripts/build_standalone_test_package.py --output dist/standalone-current`; `python scripts/verify_standalone_package.py dist/standalone-current`. Fresh output only, exact seven-file allowlist, no installer/uploader/restart side effects. See docs/WORKSHOP_PUBLISHING.md.

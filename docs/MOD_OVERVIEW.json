@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "id": "hours",
+  "name": "B47ANCE'd Active Hours",
+  "version": "0.1.0-dev.6",
+  "reviewed": true,
+  "source_digest": "6e7199427dcbde202e0b344d3ca532a1e7ccc1bd22779c103b98b745fd29da0f",
+  "features": [
+    {
+      "status": "Foundation",
+      "text": "Independent Lua-only compatibility admission; ProjectMORTIS presence disables standalone execution and unknown detection stays inactive."
+    },
+    {
+      "status": "Source",
+      "text": "User-approved transparent clock mod icon; original thumbnail preserved; exact seven-file development test packager and verifier."
+    },
+    {
+      "status": "Planned",
+      "text": "Standalone seasonal solar, Day/Night/Both profiles and inclusive weighted speed choices; same gameplay feature scope included in MORTIS."
+    },
+    {
+      "status": "Blocked",
+      "text": "Production zombie speed control, additional attributes, native startup and dedicated multiplayer verification; no gameplay controller ships."
+    }
+  ],
+  "limits": "Compatibility foundation only. No zombie writes or speed/solar gameplay. Offline Lua mocks are not Kahlua/SP/dedicated proof. G2 BLOCKED; G6 NOT TESTED; G7 BLOCKED / NOT TESTED; G8 BLOCKED. Existing-item Workshop test distribution requires explicit authorization and verified outcome.",
+  "evidence": [
+    "README.md",
+    "src/B47ANCEDActiveHours/42/mod.info",
+    "src/B47ANCEDActiveHours/42/media/lua/shared/B47ANCEDActiveHours/Compatibility.lua",
+    "docs/MORTIS_COMPATIBILITY.md",
+    "docs/VALIDATION.md",
+    "assets/branding/ActiveHoursClockIcon.provenance.json"
+  ],
+  "relations": [
+    {
+      "target": "mortis",
+      "kind": "Planned",
+      "text": "MORTIS includes the complete Active Hours gameplay scope as an alternative built-in implementation. No required dependency: standalone execution is disabled when ProjectMORTIS is enabled; parity remains planned/gated."
+    }
+  ]
+}

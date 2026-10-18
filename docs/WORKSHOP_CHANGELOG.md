@@ -1,9 +1,9 @@
-Project Version: 0.1.0-dev.5
-
-# Unpublished standalone development notes
+Project Version: 0.1.0-dev.6
 
 MP testing build - dedicated multiplayer NOT TESTED
 
-Restore the maintained standalone product direction while MORTIS includes the complete feature scope. Add independent compatibility admission: ProjectMORTIS wins; Active Hours is inactive when co-enabled or when detection is unknown. No zombie writer, speed/solar controller, mod-list edit or save migration is added. Freeze both old diagnostics at actual historical versions; existing Workshop payload/provenance is unchanged.
+Update the existing item to the independent B47ANCEDActiveHours compatibility foundation, with no MORTIS dependency. This replaces the historical B47ANCEDActiveHoursMortisProof test payload; manually select the new Core ID in disposable test mod lists and disable either old proof. No production speed/solar gameplay is present.
 
-Offline compatibility tests are recorded in VALIDATION.md. Kahlua/client/dedicated runtime behavior and gameplay remain NOT TESTED. No upload or package is created; G2 BLOCKED, G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED.
+Use the approved transparent alarm-clock cutout as the mod icon. Preserve the original project/Workshop thumbnail. When ProjectMORTIS is enabled, standalone execution is disabled; unknown detection also stays inactive. No save migration, mod-list edits or zombie writes.
+
+Offline checks only. Native startup, co-enabled behavior, SP and dedicated multiplayer remain NOT TESTED; G2/G6/G7/G8 unchanged. This is test distribution, not stable-release approval.

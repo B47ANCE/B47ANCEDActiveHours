@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.0-dev.6]
+
+- Use the user-approved transparent clock cutout as the standalone mod icon; preserve original project/Workshop thumbnail and historical proof artwork bytes.
+- Prepare the authorized existing-item compatibility-only MP test distribution with exact source/package provenance and unchanged runtime gates. No speed/solar controller is introduced.
+- Add deterministic standalone packaging/verification and a reviewed project-owned feature overview.
+
 ## [0.1.0-dev.5]
 
 - Correct the product relationship: Active Hours remains maintained standalone; MORTIS includes the same feature scope. Active Hours disables its own execution whenever ProjectMORTIS is enabled. No retirement or mutual dependency.
