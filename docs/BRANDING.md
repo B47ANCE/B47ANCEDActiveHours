@@ -1,6 +1,8 @@
-Project Version: 0.1.0-dev.5
+Project Version: 0.1.0-dev.6
 
-# Active Hours project thumbnail
+# Active Hours artwork
+
+2026-10-18 approved icon: assets/branding/ActiveHoursClockIcon.png, mirrored exactly to src/B47ANCEDActiveHours/42/icon.png. It is the generated 1254x1254 RGBA clock-only cutout with real alpha (0..255), no lettering, zombie or background fill; no resize/postprocessing. Provenance/prompt sit beside the master. All three original thumbnail copies, existing Workshop JPEG preview and poster remain byte-for-byte unchanged. Earlier fallback-icon statements below describe historical selection, not the current custom icon. Native mod-menu scaling/display remains NOT TESTED.
 
 Workshop delivery export (2026-10-16): assets/branding/ActiveHoursWorkshopPreview.jpg is a 1254x1254 JPEG encoding of the selected artwork, 199,723 bytes, SHA-256 02aeaab02b03a929eb60dc37080744f0d482032e052548a9926039eae2fba57d. Composition/dimensions are unchanged; the original PNG/root thumbnail remain byte-for-byte intact. The initial Steam update returned Limit exceeded with the larger PNG; the delivery export is for that retry, not a replacement of authoring artwork.
 

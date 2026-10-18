@@ -21,7 +21,7 @@
     "dist/preview-retry/"
   ],
   "generated_outputs": [
-    "dist/standalone-current/ (absent; no package built)"
+    "dist/standalone-current/ (authorized seven-file test package and staging; ignored)"
   ],
   "authoring_assets": [
     "thumbnail.png",
@@ -31,7 +31,8 @@
   "validation": [
     "python scripts/check_versions.py --root .",
     "python scripts/test_check_versions.py",
-    "python scripts/test_standalone_compatibility.py"
+    "python scripts/test_standalone_compatibility.py",
+    "python scripts/verify_standalone_package.py dist/standalone-current"
   ],
-  "notes": "The assigned Workshop item still contains the historical dev.4 MORTIS-dependent diagnostic. This new independent source is not installed, packaged or published. Never include frozen proof trees in a standalone package; MORTIS dependency is absent from the new source."
+  "notes": "Independent compatibility-only MP test source. User authorized existing item 3820693462 update after offline/CI/source/package checks. No native gameplay/runtime PASS, installer or automatic Steam restart. Frozen proofs and proprietary evidence are excluded from the package. Actual upload outcome is recorded separately only after verification."
 }

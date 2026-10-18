@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.5
+Project Version: 0.1.0-dev.6
 
 # Standalone Active Hours and built-in MORTIS features
 

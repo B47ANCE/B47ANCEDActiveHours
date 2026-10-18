@@ -1,4 +1,4 @@
-Project Version: 0.1.0-dev.5
+Project Version: 0.1.0-dev.6
 
 Current relationship: Active Hours remains maintained standalone; its features are also included in MORTIS. Standalone execution is disabled when MORTIS is enabled. See [MORTIS_COMPATIBILITY.md](MORTIS_COMPATIBILITY.md). No gate advances.
 

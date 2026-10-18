@@ -1,0 +1,13 @@
+# Authorized standalone Workshop MP test update
+
+User authorization 2026-10-18: use the generated clock as mod icon, keep thumbnail unchanged, merge open Active Hours PRs after checks and publish. The earlier compatibility PRs are already merged. Existing item is 3820693462, App ID 108600, title B47ANCE'd Active Hours; preserve visibility and exact existing preview artwork. No new item is created.
+
+This build contains only the standalone compatibility bootstrap, no zombie writers/speed/solar gameplay. The new Core Mod ID is B47ANCEDActiveHours with no dependencies; the earlier B47ANCEDActiveHoursMortisProof payload is preserved as history, excluded from distribution. Human operators must update disposable test lists explicitly. MORTIS precedence remains mandatory; G2/G6/G7/G8 are unchanged.
+
+Canonical text: docs/WORKSHOP_DESCRIPTION.md and docs/WORKSHOP_CHANGELOG.md. Render the description using the installed reviewed Build-WorkshopDescription.py helper, and verify generated output. Preserve paragraph breaks and mandatory MP testing label. Stage the changenote as plain text from the canonical note, with the exact project version. No blanket native/stable compatibility claim.
+
+Build only from a clean verified commit with scripts/build_standalone_test_package.py --output dist/standalone-current. This reuses the original deterministic allowlist packaging design for the seven independent source files. Output must be fresh beneath repository dist; nothing is deleted or overwritten. Run scripts/verify_standalone_package.py against that directory: exact source/ZIP/staging/manifest SHA-256, identity/version/item, source ancestry, CRC, path and case checks. Run the version checker --release for declared artifact consistency only; it does not grant stable G8.
+
+Create a VDF referencing that exact Contents tree, existing item and unchanged original Workshop JPEG preview. Keep cached SteamCMD credentials and raw output outside Git; record only sanitized exit/success/item/source/hash evidence. Inspect any upload helper before execution: no Steam desktop exit/restart/start stage may run without a new explicit affirmative answer after verified upload. Never reuse a historical combined upload-and-restart command approval.
+
+After SteamCMD committed-update success and correct item ID are verified, verify public metadata/description and preview hash when accessible. Commit a portable publication receipt and update current validation/overview while preserving the release source SHA and package hashes. Failed/unverified upload is not success. No game/server launch, local deployment, subscriber/download proof or automatic mod-list/save migration. Ask separately before restarting Steam.

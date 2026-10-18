@@ -51,7 +51,7 @@ Require valid canonical SemVer and inventory; synchronized metadata/code/docs/cu
 
 ## Project adoption — B47ANCE'd Active Hours
 
-Project Version: 0.1.0-dev.5
+Project Version: 0.1.0-dev.6
 
 User approved initial development version on 2026-10-08. This initializes versioning for research; it is not a gameplay release or a compatibility claim. No previous project version exists. An eventual stable 0.1.0 is conditional, not approved for release. Further checkpoints require deliberate version decisions; this milestone does not automatically bump versions.
 
@@ -64,3 +64,5 @@ Development decision 2026-10-14: current 0.1.0-dev.2 -> target 0.1.0-dev.3 befor
 Consolidation decision 2026-10-16: freeze standalone 0.1.0-dev.4 at its published experimental milestone. Ownership/navigation documentation only changes; no runtime, metadata or payload change and no new standalone version iteration is established. MORTIS owns subsequent development under its separate canonical version. Historical records and current declared mirrors stay unchanged.
 
 Clarification 2026-10-16 supersedes the prior retirement/freeze decision: Active Hours remains maintained independently; MORTIS includes feature parity and takes precedence when enabled. Target 0.1.0-dev.5 adds an independent compatibility bootstrap, a compatible development capability within unreleased 0.1.0. No new gameplay/config/save contract or runtime proof is introduced. Both existing diagnostic source trees and MORTIS_SPEED_PROOF.md are frozen historical at their actual dev.3/dev.4 versions.
+
+2026-10-18 decision: compatible artwork/development-tooling checkpoint 0.1.0-dev.5 -> 0.1.0-dev.6 within unreleased 0.1.0. User authorizes the clock cutout as icon, original thumbnail unchanged, PR merge after checks and existing-item Workshop test publication. No gameplay/API/schema/configuration change or stable/runtime approval. Steam desktop restart requires separate confirmation after successful upload.

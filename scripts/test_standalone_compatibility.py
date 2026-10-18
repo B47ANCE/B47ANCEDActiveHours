@@ -138,7 +138,7 @@ class CompatibilityTests(unittest.TestCase):
         self.assertEqual(self.peer().globals().B47ANCEDActiveHours.Version, info['modversion'])
         self.assertTrue((ROOT/'src/B47ANCEDActiveHours/common/.keep').exists())
         for original, copied in (
-            ('assets/branding/B47_ICON_SMALL.png','src/B47ANCEDActiveHours/42/icon.png'),
+            ('assets/branding/ActiveHoursClockIcon.png','src/B47ANCEDActiveHours/42/icon.png'),
             ('assets/branding/B47_ICON.png','src/B47ANCEDActiveHours/42/poster.png'),
             ('thumbnail.png','src/B47ANCEDActiveHours/thumbnail.png'),
         ):

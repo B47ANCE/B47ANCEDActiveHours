@@ -89,6 +89,10 @@
     {
       "path": "docs/MORTIS_COMPATIBILITY.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/MOD_OVERVIEW.json",
+      "pattern": "^  \"version\": \"(?P<version>[^\"]+)\""
     }
   ],
   "changelog": {

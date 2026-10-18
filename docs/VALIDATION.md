@@ -1,4 +1,16 @@
-Project Version: 0.1.0-dev.5
+Project Version: 0.1.0-dev.6
+
+# Clock icon / authorized distribution checkpoint — 2026-10-18
+
+Source changes: approved 1254x1254 RGBA clock-only mod icon; original project/source thumbnail and Workshop preview preserved. Lua gameplay, compatibility admission and runtime gates are unchanged. Standalone packager/verifier and reviewed MOD_OVERVIEW descriptor are development tooling/documentation. The user authorizes existing-item test publication after checks, not a stable release or game launch.
+
+Validation commands: python scripts/check_versions.py --root .; python scripts/test_check_versions.py; python scripts/test_standalone_compatibility.py under Lua 5.1 and B47_COMPAT_LUA=54; historical scripts/test_speed_proof.py and scripts/test_mortis_speed_proof.py. [TESTED offline] Version consistency PASS; 10 checker tests PASS; 15 compatibility tests PASS each on Lua 5.1/5.4; frozen proof tests 36 and 14 PASS on Lua 5.1. Canonical description render and stale-output check PASS. Exact package and upload outcomes are added after execution; not inferred from preparation. Pixel alpha and source-copy/thumbnail-preservation hashes are checked offline. G2 BLOCKED, G6 NOT TESTED, G7 BLOCKED / NOT TESTED, G8 BLOCKED. Native icon display and mod loading remain NOT TESTED.
+
+After clean-commit packaging: python scripts/verify_standalone_package.py dist/standalone-current and python scripts/check_versions.py --root . --release (version artifact check only). Prior build evidence follows at its actual tested scope. Steam desktop restart requires separate confirmation after upload.
+
+---
+
+## Historical validation through dev.5
 
 # Current standalone compatibility validation — 2026-10-16
 
